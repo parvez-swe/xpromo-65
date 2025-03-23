@@ -277,34 +277,28 @@ export function Navbar() {
                       <DropdownMenuTrigger asChild>
   <div
     className={`group/trigger flex text-sm font-bold items-center justify-between px-2 py-2 rounded-full cursor-pointer transition-all
-      ${
-        nav.categoryName === "Eco-Products"
-          ? "bg-green-800 text-white"  // Eco-Products specific styling
-          : `bg-white text-newprimary   // Base styling for other categories
-             hover:bg-newprimary hover:text-white hover:border-white  // Hover states
-             data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white`  // Open state
-      }
-      ${
-        nav.categoryName === "Shop by Category" 
-          ? "border border-newprimary hover:border-white data-[state=open]:border-white"  // Shop by Category specific border
-          : "border border-transparent"  // Default border
-      }`}
+    ${
+      nav.categoryName === "Eco-Products"
+        ? "bg-green-800 text-white"
+        : "bg-white text-newprimary"
+    }
+    ${
+      nav.categoryName === "Shop By Category"
+        ? "border border-newprimary hover:bg-newprimary hover:text-white hover:border-white data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white"
+        : "border border-transparent"
+    }`}
   >
     <div className="bg-transparent flex justify-between items-center w-full">
-      {/* Star icon for 24 HOURS */}
       {nav.categoryName === "24 HOURS" && <p>⭐</p>}
       
-      {/* Category name */}
       <p className="uppercase">{nav.categoryName}</p>
       
-      {/* Chevron icon with conditional styling */}
       {nav.categoryName !== "Eco-Products" && (
-        <ChevronDown className={`h-5 w-5 transition-all
-          ${
-            nav.categoryName === "Shop by Category"
-              ? "text-newprimary group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"  // Shop by Category chevron
-              : "text-newprimary group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"  // Default chevron
-          }`}
+        <ChevronDown className={`h-5 w-5 ${
+          nav.categoryName === "Shop by Category"
+            ? "text-newprimary transition-all group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"
+            : "text-newprimary"
+        }`}
         />
       )}
     </div>
