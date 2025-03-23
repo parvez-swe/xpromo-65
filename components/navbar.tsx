@@ -30,10 +30,20 @@ export function Navbar() {
   const { isFactoryDirect } = useSelector((state: RootState) => state.factory);
 
   const [mounted, setMounted] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // New scroll state
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   if (!mounted) {
     return null;
@@ -99,14 +109,16 @@ export function Navbar() {
                   </button>
                 </div>
               </div>
-              <div className="ml-2">
-                <Image
-                  src="/nav/interrogation.svg"
-                  width={20}
-                  height={20}
-                  alt="question mark"
-                />
-              </div>
+              <div className="ml-2 transition-opacity duration-300">
+            <div className={`${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
+              <Image
+                src="/nav/interrogation.svg"
+                width={20}
+                height={20}
+                alt="question mark"
+              />
+            </div>
+          </div>
             </div>
 
             <div className=" flex md:hidden ">
