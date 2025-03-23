@@ -48,7 +48,7 @@ export function RelatedProducts() {
                 />
               </CardContent>
               <CardFooter className="flex flex-col items-center gap-2 p-4">
-                <h3 className="font-bold uppercase tracking-wide">
+                <h3 className="font-bold uppercase tracking-wide text-newprimary">
                   {product.name}
                 </h3>
                 <button

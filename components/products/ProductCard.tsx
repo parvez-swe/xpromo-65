@@ -2,16 +2,14 @@ import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
-
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/slices/cartSlice";
-// import type { Product } from "../types/product";
 
 export function ProductCard({ product }: any) {
   const dispatch = useDispatch();
 
   return (
-    <Card className="overflow-hidden border-newprimary">
+    <Card className="overflow-hidden border-newprimary text-newprimary">
       <CardContent className="p-0">
         <Link href={`/categories/categoryid/${product.id}`}>
           <div className="w-full h-28 relative flex items-center justify-center overflow-hidden mt-5">

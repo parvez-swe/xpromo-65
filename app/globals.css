@@ -93,6 +93,10 @@
   font-family: var(--ccb);
 } */
 
+/* *body{
+  color:"#000000"
+} */
+
 @layer base {
   * {
     @apply border-border;

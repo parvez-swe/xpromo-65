@@ -15,7 +15,7 @@ export function FilterSidebar({
     <div className="space-y-4 p-6 bg-newsecondary rounded-lg">
       {/* Categories Section */}
       <div>
-        <h2 className="font-bold mb-2 text-center mx-auto">
+        <h2 className="font-bold mb-2 text-newprimary text-center mx-auto">
           SELECT YOUR CATEGORY
         </h2>
         <div className="pb-3 flex flex-col border-b-4 border-white mb-2">
@@ -55,7 +55,7 @@ export function FilterSidebar({
 
       {/* Ranges Section */}
       <div>
-        <h2 className="font-bold mb-2 text-center mx-auto">
+        <h2 className="font-bold mb-2 text-center mx-auto  text-newprimary">
           SELECT YOUR RANGE
         </h2>
         <div className="pb-3 gap-1 grid grid-cols-3 border-b-4 border-white mb-2">
@@ -87,7 +87,7 @@ export function FilterSidebar({
       {/* Styles Section */}
       {selectedCategory && (
         <div>
-          <h2 className="font-bold mb-2 text-center mx-auto uppercase">
+          <h2 className="font-bold mb-2 text-newprimary text-center mx-auto uppercase">
             {selectedCategory}
           </h2>
           <div className="space-y-2">
@@ -99,7 +99,7 @@ export function FilterSidebar({
                   ?.subcategories?.map((style: any) => (
                     <button
                       key={style.categoryName}
-                      className={`w-full  text-xs font-bold border-2 rounded-full justify-center ${
+                      className={`w-full text-newprimary  text-xs font-bold border-2 rounded-full justify-center ${
                         selectedStyle === style.categoryName
                           ? " text-white bg-newprimary border-newprimary"
                           : "border-newprimary text-newprimary"

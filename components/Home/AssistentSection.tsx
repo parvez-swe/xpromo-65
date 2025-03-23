@@ -53,8 +53,8 @@ export default function AssistanceSteps() {
                 <div className="relative min-h-64 mb-6">
                   <Lottie animationData={step.image} loop={true} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-newprimary">{step.title}</h3>
+                <p className="text-newprimary">{step.description}</p>
               </ScrollAnimation>
             ))}
           </div>

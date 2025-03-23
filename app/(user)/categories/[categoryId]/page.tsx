@@ -76,7 +76,7 @@ export default function ProductsPage() {
             />
           </aside>
           <main className="md:col-span-3">
-            <div className="flex justify-center gap-4 mb-8">
+            {/* <div className="flex justify-center gap-4 mb-8">
               <button className="rounded-full border-2 px-5 py-1 font-bold text-sm  border-newprimary bg-newprimary text-white hover:bg-black/90">
                 LOCAL STOCK
               </button>
@@ -87,7 +87,7 @@ export default function ProductsPage() {
               >
                 FACTORY DIRECT
               </button>
-            </div>
+            </div> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  ">
               {filteredProducts.map((product: any) => (
                 <ProductCard key={product.sku} product={product} />

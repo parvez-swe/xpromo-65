@@ -260,7 +260,7 @@ export function Navbar() {
                             {nav?.subcategories?.map((industry: any) => (
                               <DropdownMenuItem
                                 key={industry.imageUrl}
-                                className=" hover:bg-transparent"
+                                className=" hover:bg-transparent focus:bg-transparent"
                               >
                                 <Link
                                   href={`/categories/${industry.categoryName
@@ -307,7 +307,7 @@ export function Navbar() {
       
       {nav.categoryName !== "Eco-Products" && (
         <ChevronDown className={`h-5 w-5 ${
-          nav.categoryName === "Shop by Category"
+          nav.categoryName === "Shop By Category"
             ? "text-newprimary transition-all group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"
             : "text-newprimary"
         }`}
