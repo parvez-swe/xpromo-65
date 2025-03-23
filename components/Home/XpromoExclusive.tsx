@@ -1,0 +1,41 @@
+"use client";
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <div>
+      {/* <h1 className=" text-center text-3xl">Xpromo Exclusive</h1> */}
+      <div className=" lg:min-h-[40vh]  grid grid-cols-1 md:grid-cols-3 ">
+        <div>
+          <Image
+            src={"/image/exclusive/Bring-Events-To-Life.gif"}
+            alt=""
+            height={650}
+            width={650}
+          />
+        </div>
+
+        <div className=" bg-[#27C4D0]  col-span-2 pl-20 flex items-center justify-center">
+          <div className="  w-fit">
+            <h1 className="text-4xl font-semibold mb-8">
+              CREATE YOUR PERFECT JACKET
+            </h1>
+            <p className=" text- font-thin">
+              Choose colours, designs, and logos <br /> to make it uniquely
+              yours.
+            </p>
+
+            <div className=" mt-10 flex flex-row items-center">
+              <button className="mr-10 font-bold text-sm  border-2    border-newprimary  px-5 py-2 rounded-full">
+                START DESIGNING
+              </button>
+              <button className=" ml-10 border-2 font-bold text-sm  border-newprimary  px-5 py-2 rounded-full">
+                BROWSE OUR RANGE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
