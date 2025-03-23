@@ -35,8 +35,6 @@ export function Navbar() {
     return null;
   }
 
-  // console.log(activeNav);
-
   const category = isFactoryDirect ? WithfactoryDirect : withoutFactoryDirect;
 
   return (
