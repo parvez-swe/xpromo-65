@@ -286,8 +286,8 @@ export function Navbar() {
                                     className="w-full flex items-center justify-center"
                                   >
                                     {industry.imageUrl && (
-                                      <img
-                                        // priority
+                                      <Image
+                                        priority
                                         src={industry.imageUrl}
                                         alt={industry.categoryName}
                                         width={50}
