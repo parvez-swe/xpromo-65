@@ -18,28 +18,28 @@ export default function Footer() {
               width={400}
               alt="image"
             />
-            <p className="text-[#686868] text-xs mb-4">
-              COMMITTED TO FOSTERING DIVERSITY AND INCLUSION.
+            <p className="text-white text-xs mb-4">
+              Commited to fostering diversity and inclusion
             </p>
           </div>
 
           {/* Quick Links Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">QUICK LINKS</h3>
-            <ul className="space-y-1 text-xs text-[#686868] ">
+            <ul className="space-y-1 text-xs text-white ">
               <li>
                 <a href="/aboutus" className="ext-white">
-                  ABOUT US
+                  Abut Us
                 </a>
               </li>
               <li>
                 <Link href="/contact" className="ext-white">
-                  CONTACT US
+                  Contact Us
                 </Link>
               </li>
               <li>
                 <a href="/sustainabilitypolicy" className="ext-white">
-                  SUSTAINABILITY
+                  Sustainability
                 </a>
               </li>
               <li>
@@ -49,22 +49,22 @@ export default function Footer() {
               </li>
               <li>
                 <a href="/blog" className="ext-white">
-                  BLOG
+                  Blog
                 </a>
               </li>
               <li>
                 <Link href="/termsandcondition" className="ext-white">
-                  TERMS & CONDITIONS
+                  Terms & Condition
                 </Link>
               </li>
               <li>
                 <Link href="/pmscolorcharter" className="ext-white">
-                  PMS COLOUR CHART
+                  PMS Colour Chart
                 </Link>
               </li>
               <li>
                 <Link href="/decorationoption" className="ext-white">
-                  DECORATION OPTIONS
+                  Decoration Options
                 </Link>
               </li>
             </ul>
@@ -73,35 +73,30 @@ export default function Footer() {
           {/* Local Stock Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">LOCAL STOCK</h3>
-            <ul className="text-[#686868] space-y-1 text-xs">
+            <ul className="text-white space-y-1 text-xs">
               <li>
-                <a href="#" className="ext-white">
-                  NEW ARRIVALS
+                <a href="/categories/sydney" className="ext-white">
+                  Sydney
                 </a>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  SHOP BY CATEGORY
+                <a href="/categories/melbourse" className="ext-white">
+                  Melbourne
                 </a>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  SHOP BY INDUSTRY
+                <a href="/categories/brisbane" className="ext-white">
+                  Brisbane
                 </a>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  ECO-PRODUCTS
+                <a href="/categories/adelaide" className="ext-white">
+                  Adelaide
                 </a>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  24-HOUR TURNAROUND
-                </a>
-              </li>
-              <li>
-                <a href="#" className="ext-white">
-                  OUR BRANDS
+                <a href="/categories/perth" className="ext-white">
+                  Perth
                 </a>
               </li>
             </ul>
@@ -109,42 +104,49 @@ export default function Footer() {
 
           {/* Factory Direct Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">FACTORY DIRECT</h3>
-            <ul className="text-[#686868] space-y-1 text-xs">
+            <h3 className="text-lg font-semibold mb-4">FACTORY DIRECT STOCK</h3>
+            <ul className="text-white space-y-1 text-xs">
               <li>
-                <a href="#" className="ext-white">
-                  AUTOMOTIVE
-                </a>
+                <a href="#" className="ext-white"></a>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  CONSTRUCTIONS
-                </a>
+                <Link href="/categories/apparel" className="ext-white">
+                  Apparel
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/categories/bags&backpacks" className="ext-white">
+                  Bags & Bagpacks
+                </Link>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  EDUCATION
-                </a>
+                <Link href="/categories/headwear" className="ext-white">
+                  Headwear
+                </Link>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  HOSPITALITY
-                </a>
+                <Link href="/categories/echo-products" className="ext-white">
+                  Eco-Products
+                </Link>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  MEDICAL
-                </a>
+                <Link href="/categories/techproducts" className="ext-white">
+                  Tech Products
+                </Link>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  REAL ESTATE
-                </a>
+                <Link href="/categories/custompackaging" className="ext-white">
+                  Custom Packaging
+                </Link>
               </li>
               <li>
-                <a href="#" className="ext-white">
-                  SPORTS & FITNESS
-                </a>
+                <Link
+                  href="/categories/tradeshowsproduct"
+                  className="ext-white"
+                >
+                  Trade Shows Products
+                </Link>
               </li>
             </ul>
           </div>
@@ -152,20 +154,18 @@ export default function Footer() {
           {/* Newsletter Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">NEWSLETTER</h3>
-            <p className="text-xs text-[#686868] mb-4">
+            <p className="text-xs text-white mb-4">
               SUBSCRIBE TO OUR NEWSLETTER TO GET A LATEST UPDATES..
             </p>
             <div className="space-y-1">
               <Input
                 type="email"
                 // placeholder="Enter your email"
-                className="bg-[#9C9C9C] border-none rounded-full"
+                className="bg-white border-none rounded-full"
               />
               {/* <Button className="w-full">Subscribe</Button> */}
             </div>
-            <div className="text-[#686868] text-sm mt-4">
-              ABN 39 671 474 141
-            </div>
+            <div className="text-white text-sm mt-4">ABN 39 671 474 141</div>
           </div>
         </div>
 
@@ -206,7 +206,7 @@ export default function Footer() {
             </div>
 
             <div className="md:col-span-4 flex flex-row ">
-              <div className=" border-r-2 border-[#686868]   pr-5 mr-5 h-10 flex ice justify-center">
+              <div className=" border-r-2 border-white   pr-5 mr-5 h-10 flex ice justify-center">
                 <a
                   href="mailto:info@xpromo.com.au"
                   className="flex items-center gap-2 ext-white"

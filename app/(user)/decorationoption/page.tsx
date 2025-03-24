@@ -8,10 +8,10 @@ export default function AboutUs() {
           currentPage={"DECORATION OPTIONS"}
           previousPages={[{ name: "HOME", url: "/" }]}
         />
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-[#0f172a] my-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-newprimary my-12">
           DECORATION OPTIONS
         </h1>
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-8 ">
           <div>
             <p className="font-semibold">1. Screen Printing (Silk Screening)</p>
             <p className="mt-1">
@@ -26,26 +26,26 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Cost-effective for bulk orders</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Vibrant, long-lasting prints</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Works well on fabric and hard surfaces</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Limited to simple designs with solid colors</p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Not ideal for small or intricate details</p>
               </div>
             </div>
@@ -65,26 +65,26 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Full-color, high-resolution prints</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>No setup cost for multiple colors</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Great for complex designs and photographs</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Works best on 100% cotton fabric (for DTG)</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Can be more expensive for large runs</p>
               </div>
             </div>
@@ -102,26 +102,26 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Premium, high-end look</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Extremely durable and long-lasting</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Great for logos and simple designs</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Limited color gradients and fine details</p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>More expensive than printing methods</p>
               </div>
             </div>
@@ -141,26 +141,26 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Great for small, detailed designs</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Works for vibrant colors and gradients</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Suitable well for short-run or custom orders</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Less durable than screen printing or embroidery</p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>
                   Not ideal for bulk orders due to time-consuming application
                 </p>
@@ -181,26 +181,26 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Extremely durable (doesn&apos;t fade, crack, or peel)</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>High-quality, vibrant colors</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Ideal for full-color prints and photographic images</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Only works on polyester or polymer-coated surfaces</p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Requires light-colored backgrounds for best results</p>
               </div>
             </div>
@@ -218,26 +218,26 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Works on curved and uneven surfaces</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Can print fine details and small text</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Great for plastic, metal, and glass products</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Limited to one or a few colors per print</p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Small print area compared to other methods</p>
               </div>
             </div>
@@ -255,29 +255,29 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Elegant, sophisticated look</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Long-lasting and subtle branding</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>No ink or color limitations</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>
                   Limited to certain materials (leather, faux leather, thick
                   paper)
                 </p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Higher setup costs due to custom die creation</p>
               </div>
             </div>
@@ -296,29 +296,29 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Permanent, high-end finish</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Precise and highly detailed</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Works well on a wide range of materials</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>
                   No color options—only the material&apos;s natural finish is
                   revealed
                 </p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Not suitable for soft or flexible surfaces</p>
               </div>
             </div>
@@ -336,26 +336,26 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Full-color, photo-quality prints</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Scratch-resistant and long-lasting</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Works on virtually any hard surface</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>More expensive than pad printing or screen printing</p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Not ideal for flat or curved surfaces</p>
               </div>
             </div>
@@ -374,26 +374,26 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Luxurious, high-end appearance</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Durable and resistant to fading</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Works well on paper, leather, and packaging</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Limited to one color per stamp</p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Higher production costs</p>
               </div>
             </div>
@@ -414,30 +414,30 @@ export default function AboutUs() {
             </p>
             <div className="mt-2 space-y-1">
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Can cover entire surfaces, including curved areas</p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>
                   Excellent for complex patterns like camouflage or carbon fiber
                 </p>
               </div>
               <div className="flex items-start">
-                <Check className="h-4 w-4 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                <Check className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Highly durable results</p>
               </div>
             </div>
             <p className="mt-2">Cons:</p>
             <div className="mt-1 space-y-1">
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>
                   More expensive and time-consuming than other printing methods
                 </p>
               </div>
               <div className="flex items-start">
-                <X className="h-4 w-4 text-red-600 flex-shrink-0 mr-2 mt-0.5" />
+                <X className="h-4 w-4 text-newprimary flex-shrink-0 mr-2 mt-0.5" />
                 <p>Requires a protective coating for durability</p>
               </div>
             </div>

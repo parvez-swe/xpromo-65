@@ -1,4 +1,18 @@
-import { Check, Leaf, Recycle, Users, Globe, BarChart } from "lucide-react";
+import {
+  Check,
+  Leaf,
+  Recycle,
+  Users,
+  Globe,
+  BarChart,
+  SquareCheck,
+  Earth,
+  Sprout,
+  Wrench,
+  Heart,
+  RefreshCcw,
+  Box,
+} from "lucide-react";
 import { BreadCrumbCustom } from "@/components/BreadCrumpCustom";
 
 export default function AboutUs() {
@@ -13,7 +27,7 @@ export default function AboutUs() {
           SUSTAINABILITY POLICY
         </h1>
 
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-8 ">
           <div>
             <p className="font-semibold text-base">
               Xpromo Sustainability Statement & Policy
@@ -41,8 +55,8 @@ export default function AboutUs() {
 
             <div className="mt-3 space-y-2">
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Sustainable Sourcing - We carefully select suppliers who share
                   our environmental and ethical values, ensuring that our supply
                   chain reflects our commitment to planet and people.
@@ -50,8 +64,8 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   High-Quality Products - We focus on durable, long-lasting
                   merchandise that customers will keep and use for years,
                   reducing landfill waste from disposable promotional items.
@@ -59,8 +73,8 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Eco-Friendly Materials - We offer a wide range of products
                   made from recycled, biodegradable, and organic materials,
                   reducing our environmental footprint while still delivering
@@ -69,8 +83,8 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Waste Reduction - We implement efficient, reusable and
                   recyclable products and work with partners who minimize
                   production waste and use responsible disposal practices.
@@ -78,8 +92,8 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Ethical Manufacturing & Fair Trade Standards - We only
                   collaborate with suppliers who adhere to strict ethical and
                   fair labor practices, ensuring workers are treated with
@@ -88,8 +102,8 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Carbon Footprint Awareness - We continuously seek ways to
                   reduce emissions in our supply chain, from responsible
                   sourcing to efficient transportation and sustainable
@@ -111,8 +125,8 @@ export default function AboutUs() {
 
             <div className="mt-3 space-y-2">
               <div className="flex">
-                <Leaf className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Earth className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Eco-Conscious Manufacturing: We work with suppliers who
                   prioritize environmentally friendly production processes,
                   including reduced water consumption, low impact dyes, and
@@ -121,8 +135,8 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Recycle className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Sprout className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Sustainable Material Selection: Our products feature recycled
                   plastics, organic cotton, bamboo, biobased paper and
                   cardboard, which all help reduce environmental impact.
@@ -130,8 +144,8 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Leaf className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Wrench className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Longevity-Focused Design: We prioritize durability by
                   selecting products that are built to last, reducing the need
                   for frequent replacements and cutting down on waste.
@@ -139,8 +153,8 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Users className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Users className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Ethical Labor Practices: We ensure our supply partners comply
                   with fair wages, safe working conditions, and internationally
                   recognized labor rights.
@@ -159,37 +173,30 @@ export default function AboutUs() {
             </p>
 
             <div className="mt-3 space-y-2">
-              <p className="font-medium">Reusable Drinkware:</p>
-              <p>
-                Stainless steel, bamboo, and glass alternatives to disposable
-                plastic cups and bottles.
+              <p className="">
+                Reusable Drinkware: Stainless steel, bamboo, and glass
+                alternatives to disposable plastic cups and bottles.
               </p>
 
-              <p className="font-medium">Eco-Friendly Apparel:</p>
-              <p>
-                Organic cotton, recycled polyester, and hemp clothing with
-                ethical manufacturing practices.
+              <p className="">
+                Eco-Friendly Apparel: Organic cotton, recycled polyester, and
+                hemp clothing with ethical manufacturing practices.
               </p>
 
-              <p className="font-medium">Sustainable Bags:</p>
-              <p>
-                Tote Bags & Backpacks Made from organic cotton, jute, and rPET
-                (recycled plastic bottles).
+              <p className="">
+                Sustainable Bags: Tote Bags & Backpacks Made from organic
+                cotton, jute, and rPET (recycled plastic bottles).
               </p>
 
-              <p className="font-medium">
-                Biodegradable & Compostable Products:
-              </p>
-              <p>
-                Items that break down naturally without harming the environment.
+              <p className="">
+                Biodegradable & Compostable Products: Items that break down
+                naturally without harming the environment.
               </p>
 
-              <p className="font-medium">
-                Recycled Stationery & Office Supplies:
-              </p>
-              <p>
-                Notebooks, pens, and desk accessories made from recycled
-                materials without compromising on quality or style.
+              <p className="">
+                Recycled Stationery & Office Supplies: Notebooks, pens, and desk
+                accessories made from recycled materials without compromising on
+                quality or style.
               </p>
             </div>
           </div>
@@ -206,8 +213,8 @@ export default function AboutUs() {
 
             <div className="mt-3 space-y-2">
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <RefreshCcw className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Encouraging Durability - We emphasize products that replace
                   single-use plastics, such as reusable bags, metal straws, and
                   refillable water bottles.
@@ -215,16 +222,16 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Box className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Sustainable Packaging - We work with suppliers to provide
                   recyclable, or biodegradable packaging to reduce excess waste.
                 </p>
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Wrench className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   End-of-Life Considerations - We educate our clients on proper
                   disposal and recycling options for their promotional items,
                   promoting a circular economy approach.
@@ -245,19 +252,19 @@ export default function AboutUs() {
 
             <div className="mt-3 space-y-2">
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
+                <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                 <p>
                   Follow ethical labor laws and provide safe working conditions.
                 </p>
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
+                <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                 <p>Offer fair wages and protect worker rights.</p>
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
+                <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                 <p>
                   Prohibit child labor, forced labor, and other unfair
                   practices.
@@ -265,7 +272,7 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
+                <SquareCheck className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                 <p>
                   Are audited for compliance with global ethical sourcing
                   standards such as BSCI (Business Social Compliance Initiative)
@@ -286,24 +293,24 @@ export default function AboutUs() {
 
             <div className="mt-3 space-y-2">
               <div className="flex">
-                <BarChart className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Sprout className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-0" />
                   Carbon Footprint Calculation - Measuring our carbon footprint
                   to identify areas for improvement.
                 </p>
               </div>
 
               <div className="flex">
-                <Globe className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Globe className="h-5 w-5 text-newprimary flex-shrink-0 mr-2 inline-block" />
                   Energy-Efficient Production - Encouraging manufacturers to use
                   solar, wind, and other renewable energy sources.
                 </p>
               </div>
 
               <div className="flex">
-                <Recycle className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Recycle className="h-5 w-5 text-newprimary flex-shrink-0 mr-2 inline-block" />
                   Minimizing Waste in Production - Working with suppliers who
                   implement zero waste initiatives and closed-loop manufacturing
                   processes.
@@ -311,8 +318,8 @@ export default function AboutUs() {
               </div>
 
               <div className="flex">
-                <Leaf className="h-5 w-5 text-green-600 flex-shrink-0 mr-2" />
                 <p>
+                  <Leaf className="h-5 w-5 text-newprimary flex-shrink-0 mr-2 inline-block" />
                   Local & Regional Sourcing - Whenever possible, we source
                   products from Australian or regional suppliers to cut down on
                   carbon emissions from long-distance shipping.
@@ -359,14 +366,15 @@ export default function AboutUs() {
                 conscious decision to support sustainability, ethical business
                 practices, and a better future for our environment.
               </p>
-              <p>
+              <p className="mt-5">
                 If you&apos;re looking to branded merchandise with purpose,
                 we&apos;re here to help. Let&apos;s work together to create
                 promotional products that inspire change while respecting our
                 planet.
               </p>
               <p>
-                At sustainability starts with small choices that lead to big
+                <Heart className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-" />
+                sustainability starts with small choices that lead to big
                 impacts. Let&apos;s make them together.
               </p>
             </div>

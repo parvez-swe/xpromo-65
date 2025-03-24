@@ -24,6 +24,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+// import { join } from "path";
 
 export function Navbar() {
   const dispatch = useDispatch();
@@ -31,6 +32,10 @@ export function Navbar() {
 
   const [mounted, setMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false); // New scroll state
+  const [categoryActive, setCategoryActive] = useState(false);
+  const [industryActive, setIndustryActive] = useState(false);
+  const [hourActive, setHourActive] = useState(false);
+  const [ourBrandsActive, setOurBrandsActive] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -40,16 +45,13 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   if (!mounted) {
     return null;
   }
-
-  // console.log(activeNav);
 
   const category = isFactoryDirect ? WithfactoryDirect : withoutFactoryDirect;
 
@@ -110,15 +112,15 @@ export function Navbar() {
                 </div>
               </div>
               <div className="ml-2 transition-opacity duration-300">
-            <div className={`${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
-              <Image
-                src="/nav/interrogation.svg"
-                width={20}
-                height={20}
-                alt="question mark"
-              />
-            </div>
-          </div>
+                <div className={`${isScrolled ? "opacity-100" : "opacity-0"}`}>
+                  <Image
+                    src="/nav/interrogation.svg"
+                    width={20}
+                    height={20}
+                    alt="question mark"
+                  />
+                </div>
+              </div>
             </div>
 
             <div className=" flex md:hidden ">
@@ -200,122 +202,380 @@ export function Navbar() {
               <div key={nav.categoryName} className="relative">
                 <>
                   {nav.categoryName === "Our Brands" ? (
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <div className="bg-white text-newprimary flex  items-center justify-between px-3 py-2 rounded-full cursor-pointer">
-                          <div className="text-sm font-bold bg-transparent flex justify-between items-center w-full">
-                            <p>⭐</p>
-                            <p className=" mr-2 uppercase ">
-                              {nav.categoryName}
-                            </p>
-                            <ChevronDown className=" h-5 w-5" />
+                    <div
+                      onMouseOver={() => setOurBrandsActive(true)}
+                      onMouseLeave={() => setOurBrandsActive(false)}
+                    >
+                      <DropdownMenu
+                        open={ourBrandsActive}
+                        onOpenChange={setOurBrandsActive}
+                      >
+                        <DropdownMenuTrigger asChild>
+                          <div className="bg-white text-newprimary flex  items-center justify-between px-3 py-2 rounded-full cursor-pointer">
+                            <div className="text-sm font-bold bg-transparent flex justify-between items-center w-full">
+                              <p>⭐</p>
+                              <p className=" mr-2 uppercase ">
+                                {nav.categoryName}
+                              </p>
+                              <ChevronDown className=" h-5 w-5" />
+                            </div>
+                            {/* <p className="rotate-90 text-sm font-bold ">&gt;</p> */}
                           </div>
-                          {/* <p className="rotate-90 text-sm font-bold ">&gt;</p> */}
-                        </div>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="w-64 text-xs">
-                        <DropdownMenuGroup>
-                          {nav?.ourBrands?.map((brand: any) => (
-                            <Link
-                              href={`/categories/${brand.title
-                                .replace(/\s+/g, "-")
-                                .toLowerCase()}`}
-                              className=" w-full flex items-center justify-center"
-                              key={brand.title}
-                            >
-                              <DropdownMenuItem
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="w-64 text-xs">
+                          <DropdownMenuGroup>
+                            {nav?.ourBrands?.map((brand: any) => (
+                              <Link
+                                href={`/categories/${brand.title
+                                  .replace(/\s+/g, "-")
+                                  .toLowerCase()}`}
+                                className=" w-full flex items-center justify-center"
                                 key={brand.title}
-                                className="rounded-full h-10 hover:bg-[#B2B8BE] w-full hover:border-newprimary border-2 border-transparent group flex items-center gap-2  justify-center"
                               >
-                                {brand.icon && (
-                                  <Image
-                                    src={brand.icon}
-                                    alt={brand.title}
-                                    width={50}
-                                    height={50}
-                                    className=""
-                                  />
-                                )}
-                              </DropdownMenuItem>{" "}
-                            </Link>
-                          ))}
-                        </DropdownMenuGroup>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  ) : nav.categoryName === "Shop By Industry" ? (
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <div className="bg-white  text-newprimary flex items-center justify-between px-3 py-2 rounded-full cursor-pointer">
-                          <div className="text-sm font-bold bg-transparent flex justify-between items-center w-full">
-                            <p className="mr-2 uppercase text-newprimary">
-                              {nav.categoryName}
-                            </p>
-                            <ChevronDown className="h-5 w-5" />
-                          </div>
-                        </div>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="w-64 text-xs">
-                        <DropdownMenuGroup>
-                          <div className=" grid grid-cols-2 ">
-                            {nav?.subcategories?.map((industry: any) => (
-                              <DropdownMenuItem
-                                key={industry.imageUrl}
-                                className=" hover:bg-transparent focus:bg-transparent"
-                              >
-                                <Link
-                                  href={`/categories/${industry.categoryName
-                                    .replace(/\s+/g, "-")
-                                    .toLowerCase()}`}
-                                  className="w-full flex items-center justify-center"
+                                <DropdownMenuItem
+                                  key={brand.title}
+                                  className="rounded-full h-10 hover:bg-[#B2B8BE] w-full hover:border-newprimary border-2 border-transparent group flex items-center gap-2  justify-center"
                                 >
-                                  {industry.imageUrl && (
+                                  {brand.icon && (
                                     <Image
-                                      src={industry.imageUrl}
-                                      alt={industry.categoryName}
+                                      src={brand.icon}
+                                      alt={brand.title}
                                       width={50}
                                       height={50}
-                                      className="h-8 w-8  object-contain"
+                                      className=""
                                     />
                                   )}
-                                </Link>
-                              </DropdownMenuItem>
+                                </DropdownMenuItem>{" "}
+                              </Link>
                             ))}
+                          </DropdownMenuGroup>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </div>
+                  ) : nav.categoryName === "Shop By Industry" ? (
+                    <div
+                      onMouseOver={() => setIndustryActive(true)}
+                      onMouseLeave={() => setIndustryActive(false)}
+                    >
+                      <DropdownMenu
+                        open={industryActive}
+                        onOpenChange={setIndustryActive}
+                      >
+                        <DropdownMenuTrigger asChild>
+                          <div className="bg-white  text-newprimary flex items-center justify-between px-3 py-2 rounded-full cursor-pointer">
+                            <div className="text-sm font-bold bg-transparent flex justify-between items-center w-full">
+                              <p className="mr-2 uppercase text-newprimary">
+                                {nav.categoryName}
+                              </p>
+                              <ChevronDown className="h-5 w-5" />
+                            </div>
                           </div>
-                        </DropdownMenuGroup>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="w-64 text-xs">
+                          <DropdownMenuGroup>
+                            <div className=" grid grid-cols-2 ">
+                              {nav?.subcategories?.map((industry: any) => (
+                                <DropdownMenuItem
+                                  key={industry.imageUrl}
+                                  className=" hover:bg-transparent focus:bg-transparent"
+                                >
+                                  <Link
+                                    href={`/categories/${industry.categoryName
+                                      .replace(/\s+/g, "-")
+                                      .toLowerCase()}`}
+                                    className="w-full flex items-center justify-center"
+                                  >
+                                    {industry.imageUrl && (
+                                      <Image
+                                        priority
+                                        src={industry.imageUrl}
+                                        alt={industry.categoryName}
+                                        width={50}
+                                        height={50}
+                                        className="h-8 w-8  object-contain"
+                                      />
+                                    )}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </div>
+                          </DropdownMenuGroup>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </div>
+                  ) : nav.categoryName === "Shop By Category" ? (
+                    <div
+                      onMouseOver={() => setCategoryActive(true)}
+                      onMouseLeave={() => setCategoryActive(false)}
+                    >
+                      <DropdownMenu
+                        open={categoryActive}
+                        onOpenChange={setCategoryActive}
+                      >
+                        <DropdownMenuTrigger asChild>
+                          <div
+                            className={`group/trigger flex text-sm font-bold items-center justify-between px-2 py-2 rounded-full cursor-pointer transition-all
+                          ${
+                            nav.categoryName === "Eco-Products"
+                              ? "bg-green-800 text-white"
+                              : "bg-white text-newprimary"
+                          }
+                          ${
+                            nav.categoryName === "Shop By Category"
+                              ? "border border-newprimary hover:bg-newprimary hover:text-white hover:border-white data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white"
+                              : "border border-transparent"
+                          }`}
+                          >
+                            <div className="bg-transparent flex justify-between items-center w-full">
+                              {nav.categoryName === "24 HOURS" && <p>⭐</p>}
+
+                              <p className="uppercase">{nav.categoryName}</p>
+
+                              {nav.categoryName !== "Eco-Products" && (
+                                <ChevronDown
+                                  className={`h-5 w-5 ${
+                                    nav.categoryName === "Shop By Category"
+                                      ? "text-newprimary transition-all group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"
+                                      : "text-newprimary"
+                                  }`}
+                                />
+                              )}
+                            </div>
+                          </div>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className=" w-72 text-xs">
+                          <DropdownMenuGroup>
+                            {nav.subcategories.map((subsubcat: any, i: any) => (
+                              <React.Fragment key={i}>
+                                {subsubcat.subcategories.length <= 0 ? (
+                                  <Link
+                                    href={`/categories/${subsubcat.categoryName
+                                      .replace(/\s+/g, "-")
+                                      .toLowerCase()}`}
+                                    className=" w-full  flexitems-centerjustify-center"
+                                  >
+                                    <DropdownMenuItem className=" w-full flexitems-centerustify-center rounded-full focus:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent group">
+                                      {subsubcat.imageUrl && (
+                                        <Image
+                                          src={subsubcat.imageUrl}
+                                          alt="image"
+                                          width={100}
+                                          height={100}
+                                          className={`${
+                                            nav.categoryName ===
+                                            "Shop By Industry"
+                                              ? " h-[10%] w-[10%] "
+                                              : "group-hover:filter group-hover:brightness-0 group-hover:invert"
+                                          }`}
+                                        />
+                                      )}
+                                      <p className="text-[10px] font-bold">
+                                        {subsubcat.categoryName}
+                                      </p>
+                                    </DropdownMenuItem>
+                                  </Link>
+                                ) : (
+                                  <DropdownMenuSub>
+                                    <DropdownMenuSubTrigger className="hover:bg-[#B2B8BE] pl-5 focus:bg-[#B2B8BE] rounded-full hover:border-newprimary border-2 border-transparent group relative flex items-center gap-2">
+                                      {subsubcat.imageUrl && (
+                                        <div className="p-2 rounded-full border border-newprimary group-hover:bg-newprimary group-data-[state=open]:bg-newprimary">
+                                          <Image
+                                            src={subsubcat.imageUrl}
+                                            alt="image"
+                                            width={20}
+                                            height={20}
+                                            className="h-3 w-3 transition-all duration-300 group-hover:invert group-hover:brightness-0 group-data-[state=open]:invert group-data-[state=open]:brightness-0"
+                                          />
+                                        </div>
+                                      )}
+                                      <div className="flex flex-1 items-center gap-1 justify-between">
+                                        <p className="text-xs font-bold">
+                                          {subsubcat.categoryName}
+                                        </p>
+                                        <ChevronRight className="h-4 w-4  text-newprimary opacity-0 group-hover:opacity-100 transition-opacity duration-200    group-data-[state=open]:opacity-100" />
+                                      </div>
+                                    </DropdownMenuSubTrigger>
+                                    <DropdownMenuPortal>
+                                      <DropdownMenuSubContent>
+                                        {subsubcat.subcategories.map(
+                                          (subsubsubcat: any, j: any) => (
+                                            <Link
+                                              key={j}
+                                              href={`/categories/${subsubsubcat.categoryName
+                                                .replace(/\s+/g, "-")
+                                                .toLowerCase()}`}
+                                              className=" font-bold"
+                                            >
+                                              {" "}
+                                              <DropdownMenuItem className="text-[10px] hover:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent rounded-full">
+                                                {subsubsubcat.categoryName}
+                                              </DropdownMenuItem>{" "}
+                                            </Link>
+                                          )
+                                        )}
+                                      </DropdownMenuSubContent>
+                                    </DropdownMenuPortal>
+                                  </DropdownMenuSub>
+                                )}
+                              </React.Fragment>
+                            ))}
+                          </DropdownMenuGroup>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </div>
+                  ) : nav.categoryName === "24 HOURS" ? (
+                    <div
+                      onMouseOver={() => setHourActive(true)}
+                      onMouseLeave={() => setHourActive(false)}
+                    >
+                      <DropdownMenu
+                        open={hourActive}
+                        onOpenChange={setHourActive}
+                      >
+                        <DropdownMenuTrigger asChild>
+                          <div
+                            className={`group/trigger flex text-sm font-bold items-center justify-between px-2 py-2 rounded-full cursor-pointer transition-all
+                          ${
+                            nav.categoryName === "Eco-Products"
+                              ? "bg-green-800 text-white"
+                              : "bg-white text-newprimary"
+                          }
+                          ${
+                            nav.categoryName === "Shop By Category"
+                              ? "border border-newprimary hover:bg-newprimary hover:text-white hover:border-white data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white"
+                              : "border border-transparent"
+                          }`}
+                          >
+                            <div className="bg-transparent flex justify-between items-center w-full">
+                              {nav.categoryName === "24 HOURS" && <p>⭐</p>}
+
+                              <p className="uppercase">{nav.categoryName}</p>
+
+                              {nav.categoryName !== "Eco-Products" && (
+                                <ChevronDown
+                                  className={`h-5 w-5 ${
+                                    nav.categoryName === "Shop By Category"
+                                      ? "text-newprimary transition-all group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"
+                                      : "text-newprimary"
+                                  }`}
+                                />
+                              )}
+                            </div>
+                          </div>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="w-64 text-xs">
+                          <DropdownMenuGroup>
+                            {nav.subcategories.map((subsubcat: any, i: any) => (
+                              <React.Fragment key={i}>
+                                {subsubcat.subcategories.length <= 0 ? (
+                                  <Link
+                                    href={`/categories/${subsubcat.categoryName
+                                      .replace(/\s+/g, "-")
+                                      .toLowerCase()}`}
+                                    className=" w-full  flexitems-centerjustify-center"
+                                  >
+                                    <DropdownMenuItem className=" w-full flexitems-centerustify-center rounded-full focus:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent group">
+                                      {subsubcat.imageUrl && (
+                                        <Image
+                                          src={subsubcat.imageUrl}
+                                          alt="image"
+                                          width={100}
+                                          height={100}
+                                          className={`${
+                                            nav.categoryName ===
+                                            "Shop By Industry"
+                                              ? " h-[10%] w-[10%] "
+                                              : "group-hover:filter group-hover:brightness-0 group-hover:invert"
+                                          }`}
+                                        />
+                                      )}
+                                      <p className="text-[10px] font-bold">
+                                        {subsubcat.categoryName}
+                                      </p>
+                                    </DropdownMenuItem>
+                                  </Link>
+                                ) : (
+                                  <DropdownMenuSub>
+                                    <DropdownMenuSubTrigger className="hover:bg-[#B2B8BE] focus:bg-[#B2B8BE] rounded-full hover:border-newprimary border-2 border-transparent group relative flex items-center gap-2">
+                                      {subsubcat.imageUrl && (
+                                        <div className="p-2 rounded-full border border-newprimary group-hover:bg-newprimary group-data-[state=open]:bg-newprimary">
+                                          <Image
+                                            src={subsubcat.imageUrl}
+                                            alt="image"
+                                            width={20}
+                                            height={20}
+                                            className="h-3 w-3 transition-all duration-300 group-hover:invert group-hover:brightness-0 group-data-[state=open]:invert group-data-[state=open]:brightness-0"
+                                          />
+                                        </div>
+                                      )}
+                                      <div className="flex flex-1 items-center gap-1 justify-between">
+                                        <p className="text-xs font-bold ">
+                                          {subsubcat.categoryName}
+                                        </p>
+                                        <ChevronRight className="h-4 w-4  text-newprimary opacity-0 group-hover:opacity-100 transition-opacity duration-200    group-data-[state=open]:opacity-100" />
+                                      </div>
+                                    </DropdownMenuSubTrigger>
+                                    <DropdownMenuPortal>
+                                      <DropdownMenuSubContent>
+                                        {subsubcat.subcategories.map(
+                                          (subsubsubcat: any, j: any) => (
+                                            <Link
+                                              key={j}
+                                              href={`/categories/${subsubsubcat.categoryName
+                                                .replace(/\s+/g, "-")
+                                                .toLowerCase()}`}
+                                              className=" font-bold"
+                                            >
+                                              {" "}
+                                              <DropdownMenuItem className="text-xs font-bold hover:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent rounded-full">
+                                                {subsubsubcat.categoryName}
+                                              </DropdownMenuItem>
+                                            </Link>
+                                          )
+                                        )}
+                                      </DropdownMenuSubContent>
+                                    </DropdownMenuPortal>
+                                  </DropdownMenuSub>
+                                )}
+                              </React.Fragment>
+                            ))}
+                          </DropdownMenuGroup>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </div>
                   ) : nav.subcategories?.length > 0 ? (
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
-  <div
-    className={`group/trigger flex text-sm font-bold items-center justify-between px-2 py-2 rounded-full cursor-pointer transition-all
-    ${
-      nav.categoryName === "Eco-Products"
-        ? "bg-green-800 text-white"
-        : "bg-white text-newprimary"
-    }
-    ${
-      nav.categoryName === "Shop By Category"
-        ? "border border-newprimary hover:bg-newprimary hover:text-white hover:border-white data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white"
-        : "border border-transparent"
-    }`}
-  >
-    <div className="bg-transparent flex justify-between items-center w-full">
-      {nav.categoryName === "24 HOURS" && <p>⭐</p>}
-      
-      <p className="uppercase">{nav.categoryName}</p>
-      
-      {nav.categoryName !== "Eco-Products" && (
-        <ChevronDown className={`h-5 w-5 ${
-          nav.categoryName === "Shop By Category"
-            ? "text-newprimary transition-all group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"
-            : "text-newprimary"
-        }`}
-        />
-      )}
-    </div>
-  </div>
-</DropdownMenuTrigger>
+                        <div
+                          className={`group/trigger flex text-sm font-bold items-center justify-between px-2 py-2 rounded-full cursor-pointer transition-all
+                          ${
+                            nav.categoryName === "Eco-Products"
+                              ? "bg-green-800 text-white"
+                              : "bg-white text-newprimary"
+                          }
+                          ${
+                            nav.categoryName === "Shop By Category"
+                              ? "border border-newprimary hover:bg-newprimary hover:text-white hover:border-white data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white"
+                              : "border border-transparent"
+                          }`}
+                        >
+                          <div className="bg-transparent flex justify-between items-center w-full">
+                            {nav.categoryName === "24 HOURS" && <p>⭐</p>}
+
+                            <p className="uppercase">{nav.categoryName}</p>
+
+                            {nav.categoryName !== "Eco-Products" && (
+                              <ChevronDown
+                                className={`h-5 w-5 ${
+                                  nav.categoryName === "Shop By Category"
+                                    ? "text-newprimary transition-all group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"
+                                    : "text-newprimary"
+                                }`}
+                              />
+                            )}
+                          </div>
+                        </div>
+                      </DropdownMenuTrigger>
                       <DropdownMenuContent className="w-64 text-xs">
                         <DropdownMenuGroup>
                           {nav.subcategories.map((subsubcat: any, i: any) => (

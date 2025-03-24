@@ -30,13 +30,18 @@ export function BreadCrumbCustom({
           {previousPages.map((p) => (
             <React.Fragment key={p.name}>
               <BreadcrumbItem className=" uppercase italic">
-                <Link href={p.url}>{p.name}</Link>
+                <Link
+                  className="text-newprimary text-xs font-bold"
+                  href={p.url}
+                >
+                  {p.name}
+                </Link>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
             </React.Fragment>
           ))}
           <BreadcrumbItem>
-            <BreadcrumbPage className="uppercase italic">
+            <BreadcrumbPage className="uppercase italic text-newprimary text-xs font-bold">
               {currentPage}
             </BreadcrumbPage>
           </BreadcrumbItem>

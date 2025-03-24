@@ -1,12 +1,18 @@
+import { BreadCrumbCustom } from "@/components/BreadCrumpCustom";
+
 export default function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen">
       <section className="py-12 md:py-16 lg:py-20  max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-[#0f172a] mb-12">
+        <BreadCrumbCustom
+          currentPage={"FAQ"}
+          previousPages={[{ name: "HOME", url: "/" }]}
+        />
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-[#0f172a] my-12">
           FAQ
         </h1>
 
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-8">
           <div>
             <p className="font-semibold">
               Why Should I Choose Xpromo for My Branding Needs?

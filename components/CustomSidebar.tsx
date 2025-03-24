@@ -8,8 +8,8 @@ import { ScrollArea } from "./ui/scroll-area";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import {
-  decreaseQty,
-  increaseQty,
+  // decreaseQty,
+  // increaseQty,
   removeFromCart,
 } from "@/redux/slices/cartSlice";
 import {
@@ -24,6 +24,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
   const dispatch = useDispatch();
   const { cartItems, totalQty } = useSelector((state: RootState) => state.cart);
   const [date, setDate] = useState<Date | undefined>(undefined);
+  const [nodeadline, setNoDeadline] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -32,6 +33,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
   };
 
   // console.log(cartItems);
+  const [peopleCount, setPeopleCount] = useState(50);
 
   return (
     <>
@@ -98,7 +100,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                       <div className="flex items-center gap-4">
                         <span className="font-bold">QTY</span>
                         {/* Quantity */}
-                        <div className="flex items-center mt-2 space-x-4  border border-black rounded-full w-fit">
+                        {/* <div className="flex items-center mt-2 space-x-4  border border-black rounded-full w-fit">
                           <button
                             type="button"
                             onClick={() => dispatch(decreaseQty(citem.id))}
@@ -116,6 +118,56 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                           >
                             +
                           </button>
+                        </div> */}
+                        <div className="flex flex-row items-center justify-center">
+                          <div className="flex-1 flex items-center justify-center">
+                            <div className="flex items-center mt-2 space-x-4 border-2 border-newprimary ml-10 rounded-full">
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  setPeopleCount((prev) =>
+                                    Math.max(0, prev - 1)
+                                  )
+                                }
+                                className="px-3 text-3xl rounded-md"
+                              >
+                                -
+                              </button>
+                              <input
+                                type="number"
+                                value={peopleCount}
+                                onChange={(e) =>
+                                  setPeopleCount(
+                                    Math.max(0, parseInt(e.target.value) || 0)
+                                  )
+                                }
+                                className="text-lg italic font-semibold w-16 bg-transparent text-center border-0 focus:outline-none"
+                                min="0"
+                              />
+                              <style>
+                                {`
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        input[type="number"] {
+          -moz-appearance: textfield; /* Firefox */
+        }
+        `}
+                              </style>
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  setPeopleCount((prev) => prev + 1)
+                                }
+                                className="px-3 text-3xl rounded-md"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -159,15 +211,29 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                               type="date"
                               className=" bg-newsecondary rounded-md shadow-sm focus:ring-newprimary focus:border-newprimary"
                             /> */}
-                            <div>
-                              <CustomDatePicker date={date} setDate={setDate} />
-                            </div>
+                            {!nodeadline && (
+                              <div>
+                                <CustomDatePicker
+                                  date={date}
+                                  setDate={setDate}
+                                />
+                              </div>
+                            )}
 
-                            <label className="flex items-center space-x-2">
-                              <button className="px-4  rounded-full  border-2 border-newprimary focus:ring-2  focus: ring-newprimary focus: bg-newprimary focus:  italic  uppercase text-sm text-white ">
-                                No Deadline
-                              </button>
-                            </label>
+                            {!date && (
+                              <label className="flex items-center space-x-2">
+                                <button
+                                  onClick={() => setNoDeadline(true)}
+                                  className={`px-4 italic  text-[10px] h-6   rounded-full  border-2 border-newprimary focus:ring-2   focus: ring-newprimary focus: ${
+                                    nodeadline
+                                      ? "bg-newprimary text-white"
+                                      : "text-newprimary"
+                                  } focus: text-white  `}
+                                >
+                                  No Deadline
+                                </button>
+                              </label>
+                            )}
                           </div>
                         </div>
 

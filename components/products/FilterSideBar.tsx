@@ -31,7 +31,8 @@ export function FilterSidebar({
                           ? "bg-black"
                           : ""
                       }`}
-                      onClick={() => onCategorySelect(subcat.categoryName)}
+                      // onClick={() => onCategorySelect(subcat.categoryName)}
+                      onMouseOver={() => onCategorySelect(subcat.categoryName)}
                     >
                       <Image
                         src={subcat.imageUrl}
@@ -58,11 +59,11 @@ export function FilterSidebar({
         <h2 className="font-bold mb-2 text-center mx-auto  text-newprimary">
           SELECT YOUR RANGE
         </h2>
-        <div className="pb-3 gap-1 grid grid-cols-3 border-b-4 border-white mb-2">
+        <div className="pb-3 gap-1 grid grid-cols-3 border-b-4 border-white e mb-2">
           {ranges.map((range: any) => (
             <button
               key={range.name}
-              className={`group w-full py-1 flex flex-col items-center justify-center text-xs border-2 rounded-full ${
+              className={`group w-full py-1 flex flex-col items-center justify-center text-xs border-2  border-newprimary rounded-full ${
                 selectedRange === range.name
                   ? "bg-black text-white"
                   : "border-black"

@@ -52,24 +52,52 @@ export function ProductDetails() {
           <div className=" grid grid-cols-3 mt-2 ">
             <h2 className=" font-bold text-lg ">Quantity:</h2>
             {/* Quantity */}
-            <div className="flex items-center  space-x-4  border-2 border-newprimary rounded-full w-fit">
-              <button
-                type="button"
-                onClick={() => setProductCount((prev) => Math.max(0, prev - 1))}
-                className="px-3  text-3xl rounded-md"
-              >
-                -
-              </button>
-              <span className="text-lg font-semibold italic">
-                {productCount}
-              </span>
-              <button
-                type="button"
-                onClick={() => setProductCount((prev) => prev + 1)}
-                className="px-3  text-3xl rounded-md"
-              >
-                +
-              </button>
+
+            <div className="flex flex-row items-center justify-center">
+              <div className="flex-1 flex items-center justify-center">
+                <div className="flex items-center mt-2 space-x-4 border-2 border-newprimary bg-white ml-10 rounded-full">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setProductCount((prev) => Math.max(0, prev - 1))
+                    }
+                    className="px-3 text-3xl rounded-md"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    value={productCount}
+                    onChange={(e) =>
+                      setProductCount(
+                        Math.max(0, parseInt(e.target.value) || 0)
+                      )
+                    }
+                    className="text-lg italic font-semibold w-16 bg-transparent text-center border-0 focus:outline-none"
+                    min="0"
+                  />
+                  <style>
+                    {`
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        input[type="number"] {
+          -moz-appearance: textfield; /* Firefox */
+        }
+        `}
+                  </style>
+                  <button
+                    type="button"
+                    onClick={() => setProductCount((prev) => prev + 1)}
+                    className="px-3 text-3xl rounded-md"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -80,7 +108,7 @@ export function ProductDetails() {
             </h2>
             <Textarea
               placeholder="PRINT POSITION, COLOURS, DIFFERENT QUANTITIES AND SIZES ETC."
-              className="min-h-[100px] bg-gray-50 rounded-3xl"
+              className=" italic  min-h-[100px] bg-gray-50 rounded-3xl"
             />
           </div>
 
@@ -93,12 +121,13 @@ export function ProductDetails() {
 
           {/* What's Next Section */}
           <div className="space-y-2">
-            <h2 className="text-sm font-semibold lg:text-xl">
+            <h2 className="text-sm font-semibold lg:text-xl ">
               WHAT&apos;S NEXT?
             </h2>
             <p className="text-sm text-gray-700 lg:text-base">
-              AFTER FINALIZING YOUR PRODUCT SELECTION, SUBMIT YOUR QUOTE
-              REQUEST. WE WILL CREATE FREE MOCK-UPS AND PROVIDE A QUOTATION
+              What's next? After finalizing your product selection, subit your
+              quote request. we will create free mock-ups and provide a
+              quotation
             </p>
             <p className="font-bold text-sm lg:text-base">
               NO PAYMENT IS REQUIRED AT THIS STAGE
