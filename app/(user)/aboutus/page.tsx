@@ -36,10 +36,10 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="">
             <h2 className="text-xl font-bold text-newprimary">Our Values</h2>
 
-            <div className="space-y-1">
+            <div className="">
               <p className="text-newprimary ">
                 <span className="font-bold text-newprimary italic">Own It</span>
                 <span className="font-thin">
@@ -51,7 +51,7 @@ export default function AboutUs() {
               </p>
             </div>
 
-            <div className="space-y-1">
+            <div className="">
               <span className="font-semibold italic">Customer First</span>
               <span className="text-newprimary">
                 - Our customers are at the core of everything we do. We strive
@@ -60,7 +60,7 @@ export default function AboutUs() {
               </span>
             </div>
 
-            <div className="space-y-1">
+            <div className="">
               <span className="font-semibold italic">
                 Sustainability Always
               </span>

@@ -285,6 +285,7 @@ export function Navbar() {
                                       .toLowerCase()}`}
                                     className="w-full flex items-center justify-center"
                                   >
+                                    {console.log(industry.imageUrl)}
                                     {industry.imageUrl && (
                                       <Image
                                         priority
