@@ -1553,37 +1553,37 @@ export const withoutFactoryDirect = [
     subcategories: [
       {
         categoryName: "Automotive",
-        imageUrl: "/image/Shop-by-Industry/auto.svg",
+        imageUrl: "/auto.svg",
         subcategories: [],
       },
       {
         categoryName: "Construction",
-        imageUrl: "/image/Shop-by-Industry/constructions.svg",
+        imageUrl: "/constructions.svg",
         subcategories: [],
       },
       {
         categoryName: "Education",
-        imageUrl: "/image/Shop-by-Industry/school.svg",
+        imageUrl: "/school.svg",
         subcategories: [],
       },
       {
         categoryName: "Hospitality",
-        imageUrl: "/image/Shop-by-Industry/hospitality.svg",
+        imageUrl: "/hospitality.svg",
         subcategories: [],
       },
       {
         categoryName: "Medical",
-        imageUrl: "/image/Shop-by-Industry/Medical.svg",
+        imageUrl: "/Medical.svg",
         subcategories: [],
       },
       {
         categoryName: "Real Estate",
-        imageUrl: "/image/Shop-by-Industry/realestate.svg",
+        imageUrl: "/realestate.svg",
         subcategories: [],
       },
       {
         categoryName: "Sports & Fitness",
-        imageUrl: "/image/Shop-by-Industry/sport.svg",
+        imageUrl: "/sport.svg",
         subcategories: [],
       },
     ],
