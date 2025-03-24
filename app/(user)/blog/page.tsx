@@ -15,15 +15,17 @@ export default function AboutUs() {
           BLOG
         </h1>
 
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-8">
           {/* Blog Post 1 */}
-          <div className="flex flex-col md:flex-row gap-6 pb-8 border-b border-gray-200">
+          <div className="flex flex-col md:flex-row gap-6 pb-8 border-b-4 border-newprimary">
             <div className="md:w-2/3 space-y-2">
               <h2 className="text-xl font-semibold text-newprimary">
                 The Rise of Sustainable Promotional Products: Why Your Brand
                 Should Go Green
               </h2>
-              <p className="text-sm text-gray-  text-newprimary">10th March 2025</p>
+              <p className="text-sm text-gray-  text-newprimary">
+                10th March 2025
+              </p>
               <div className="mt-4 space-y-3 text-sm">
                 <p className="text-newprimary">
                   Sustainability is no longer a trend—it&apos;s a necessity.
@@ -63,7 +65,9 @@ export default function AboutUs() {
               <h2 className="text-xl font-semibold text-newprimary">
                 How to Choose the Right Promotional Product for Your Business
               </h2>
-              <p className="text-sm text-gray-  text-newprimary">9th March 2025</p>
+              <p className="text-sm text-gray-  text-newprimary">
+                9th March 2025
+              </p>
               <div className="mt-4 space-y-3 text-sm">
                 <p className="text-newprimary">
                   Promotional products are a powerful marketing tool, but
@@ -103,7 +107,9 @@ export default function AboutUs() {
               <h2 className="text-xl font-semibold text-newprimary">
                 The Top Promotional Product Trends for 2025
               </h2>
-              <p className="text-sm text-gray-  text-newprimary">11th March 2025</p>
+              <p className="text-sm text-gray-  text-newprimary">
+                11th March 2025
+              </p>
               <div className="mt-4 space-y-3 text-sm">
                 <p className="text-newprimary">
                   The promotional product industry is constantly evolving, and

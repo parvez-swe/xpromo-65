@@ -60,7 +60,7 @@ export function Navbar() {
       {/* <div className="flex justify-between items-center px-4 h-20 "> */}
 
       <div className="max-w-[1280px] mx-auto">
-        <div className=" grid grid-cols-3 border-b   px-4 h-20  ">
+        <div className=" grid grid-cols-3 border-b   h-20  ">
           {/* nav menu */}
           <div className=" flex items-center  justify-centers gap-5">
             <div className=" hidden">
@@ -197,7 +197,7 @@ export function Navbar() {
       </div>
       <div className="relative">
         <div className="bg-newprimary ">
-          <div className="py-2 grid grid-cols-6 gap-2 px-2 max-w-[1280px] mx-auto">
+          <div className="py-2 grid grid-cols-6 gap-2  max-w-[1280px] mx-auto">
             {category.map((nav: any) => (
               <div key={nav.categoryName} className="relative">
                 <>
