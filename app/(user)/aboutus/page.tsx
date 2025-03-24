@@ -83,7 +83,7 @@ export default function AboutUs() {
               difference. Here&apos;s what makes us unique:
             </p>
 
-            <div className="space-y-3 text-newprimary ">
+            <div className=" text-newprimary ">
               <p className="text-newprimary ">
                 <SquareCheck className="h-5 w-5 text-newprimary  flex-shrink-0 mr-2 inline-block" />
                 <span className="font-semibold italic text-nowrap">
@@ -123,14 +123,14 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className="mt-2">
             <h2 className="text-xl font-bold text-newprimary">
               Join Us in Creating a Better Future
             </h2>
             <p className="text-newprimary">
               At Xpromo, we believe that businesses shouldn&apos;t have to
               choose between effective branding and environmental responsibility
-              —they can have both. We&apos;re here to help brands make a
+              <br /> —they can have both. We&apos;re here to help brands make a
               statement that matters, with promotional products that reflect
               their values and vision for a better world.
             </p>
