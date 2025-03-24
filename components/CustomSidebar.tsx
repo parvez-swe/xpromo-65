@@ -44,7 +44,9 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
       >
         <p
           className={`w-fit  ${
-            !isFactoryDirect ? "   text-white bg-black " : "text-white bg-black"
+            !isFactoryDirect
+              ? "   text-white bg-newprimary "
+              : "text-white bg-newprimary"
           }  rounded-full flex items-center justify-center absolute -top-3 -right-3    text-xs  min-h-5 min-w-5 text-center`}
         >
           {totalQty}
@@ -52,7 +54,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
 
         <ShoppingCart
           className={` ${
-            !isFactoryDirect ? " text-black " : "text-black"
+            !isFactoryDirect ? " text-newprimary " : "text-newprimary"
           } h-7 w-7`}
         />
       </div>
@@ -100,7 +102,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                       <div className="flex items-center gap-4">
                         <span className="font-bold">QTY</span>
                         {/* Quantity */}
-                        {/* <div className="flex items-center mt-2 space-x-4  border border-black rounded-full w-fit">
+                        {/* <div className="flex items-center mt-2 space-x-4  border border-newprimary rounded-full w-fit">
                           <button
                             type="button"
                             onClick={() => dispatch(decreaseQty(citem.id))}
@@ -376,7 +378,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
       {/* Backdrop */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/30 z-40"
+          className="fixed inset-0 bg-newprimary /30 z-40"
           onClick={toggleSidebar}
         ></div>
       )}
