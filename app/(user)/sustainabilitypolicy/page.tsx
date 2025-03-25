@@ -32,7 +32,7 @@ export default function AboutUs() {
             <p className="font-semibold text-base">
               Xpromo Sustainability Statement & Policy
             </p>
-            <p className="mt-1">
+            <p className="">
               At Xpromo, sustainability isn&apos;t just a buzzword—it&apos;s at
               the heart of everything we do. We are committed to transforming
               the promotional products industry through sustainable, ethical
@@ -46,7 +46,7 @@ export default function AboutUs() {
             <p className="font-semibold text-base">
               Our Commitment to Sustainability
             </p>
-            <p className="mt-1">
+            <p className="">
               We recognize that the traditional promotional product industry has
               often contributed to excessive waste, short product lifespans, and
               questionable manufacturing practices. At Xpromo, we are actively
@@ -117,7 +117,7 @@ export default function AboutUs() {
             <p className="font-semibold text-base">
               Sustainable Sourcing & Supplier Partnerships
             </p>
-            <p className="mt-1">
+            <p className="">
               We believe that true sustainability starts at the source.
               That&apos;s why we carefully vet all our suppliers to ensure they
               meet our strict environmental and ethical standards, including:
@@ -167,7 +167,7 @@ export default function AboutUs() {
             <p className="font-semibold text-base">
               Our Sustainable Product Range
             </p>
-            <p className="mt-1">
+            <p className="">
               We are proud to offer an expanding range of sustainable
               promotional products, including:
             </p>
@@ -205,7 +205,7 @@ export default function AboutUs() {
             <p className="font-semibold text-base">
               Reducing Waste & Promoting Responsible Consumption
             </p>
-            <p className="mt-1">
+            <p className="">
               As part of our sustainability mission, we take steps to ensure
               that promotional products are not only environmentally friendly
               but also remain valuable to their recipients:
@@ -244,7 +244,7 @@ export default function AboutUs() {
             <p className="font-semibold text-base">
               Ethical Manufacturing & Fair Trade Practices
             </p>
-            <p className="mt-1">
+            <p className="">
               We believe that sustainability extends beyond the environment—it
               includes people and communities, too. That&apos;s why we only
               partner with suppliers who:
@@ -286,7 +286,7 @@ export default function AboutUs() {
             <p className="font-semibold text-base">
               Carbon Footprint & Supply Chain Transparency
             </p>
-            <p className="mt-1">
+            <p className="">
               We are committed to reducing our environmental impact at every
               stage of our supply chain. Our approach includes:
             </p>
@@ -332,12 +332,12 @@ export default function AboutUs() {
             <p className="font-semibold text-base">
               Our Future Sustainability Goals
             </p>
-            <p className="mt-1">
+            <p className="">
               At Xpromo, sustainability is an ongoing journey. We are committed
               to setting and achieving ambitious environmental goals, including:
             </p>
 
-            <div className="mt-3 space-y-2">
+            <div className="mt-3 ">
               <p>
                 Increasing our range of 100% recycled and biodegradable
                 products.
@@ -372,7 +372,7 @@ export default function AboutUs() {
                 promotional products that inspire change while respecting our
                 planet.
               </p>
-              <p>
+              <p className="mt-3">
                 <Heart className="h-5 w-5 text-newprimary  inline-block mr-2 flex-shrink-" />
                 sustainability starts with small choices that lead to big
                 impacts. Let&apos;s make them together.

@@ -36,7 +36,10 @@ export function RelatedProducts() {
       <ScrollArea className="w-full whitespace-nowrap rounded-lg">
         <div className="flexw-maxspace-x-4 p-4 grid grid-cols-4 gap-3 ">
           {relatedProducts.map((product) => (
-            <Card key={product.id} className="w-full shrink-0">
+            <Card
+              key={product.id}
+              className="w-full shrink-0 border border-newprimary"
+            >
               <CardContent className="p-4 flex  justify-center items-center">
                 <Image
                   src={"/images/product.jpg"}

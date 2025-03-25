@@ -132,7 +132,7 @@ export default function Home() {
           previousPages={[{ name: "HOME", url: "/" }]}
         />
       </div>
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
+      <h1 className="text-3xl md:text-4xl font-bold text-end mr-20 mb-8">
         PMS COLOUR CHART
       </h1>
 
@@ -140,7 +140,7 @@ export default function Home() {
         <input
           type="text"
           placeholder="SEARCH YOUR COLOUR"
-          className="w-full italic px-4 py-2 border-4 border-gray-800 rounded-full focus:outline-none"
+          className="w-full italic px-6 py-2 border-4 border-newprimary rounded-full focus:outline-none"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
@@ -155,22 +155,21 @@ export default function Home() {
             PMS Colours used for printing
           </h2>
         </div>
+        <div className="w-[60%] border-t-2 border-newprimary my-6"></div>
 
-        <hr className="border-t  border-newprimary my-6 mr-[40%]" />
-
-        <p className="text-lg md:text-xl text-newprimary px-16">
+        <p className="text-sm md:text-sm text-newprimary px-16">
           Use this guide to assist your colour selection and specification
           process.
         </p>
 
-        <p className="text-base md:text-lg text-newprimary max-w-3xls mb-5 px-16">
+        <p className="text-sm md:text-sm text-newprimary max-w-3xls mb-5 px-16">
           This chart is a reference guide only. Pantone® colours on computer
           screens may vary based on the graphics card and monitor used in your
           system. For true accuracy use the Pantone® Colour Publication.
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-5 px-16">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-5 px-16">
         {filteredColors.map((color) => (
           <ColorSwatch key={color.name} color={color.color} name={color.name} />
         ))}

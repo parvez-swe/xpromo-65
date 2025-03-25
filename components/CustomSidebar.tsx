@@ -61,33 +61,45 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
 
       {/* Custom Sidebar */}
       <div
-        className={`fixed w-[100vw] md:w-[50vw] top-0 right-0 h-[100vh] bg-white shadow-lg z-50 transition-transform transform ${
+        className={`fixed w-[100vw] md:w-[50vw] top-0 right-0 h-[100vh]  border-l-2 border-graytext bg-white shadow-lg z-50 transition-transform transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Sidebar Header */}
-        <div className="p-4 border-b border-gray-200 flex justify-between items-center">
-          <h2 className="text-lg font-semibold">Quote Summary</h2>
+        <div className="p-4  flex justify-between items-center">
+          <h2 className="text-3xl font-semibold uppercase">Quote Summary</h2>
           <button className=" text-3xl" onClick={toggleSidebar}>
-            X
+            <Image
+              src={"/cross.png"}
+              height={100}
+              width={100}
+              alt="X"
+              className="h-5 w-auto"
+            />
           </button>
         </div>
 
         {/* Sidebar Content */}
         {totalQty > 0 ? (
-          <ScrollArea className="p-4 overflow-hidden overscroll-y-auto h-[90vh]">
+          <ScrollArea className="px-4 overflow-hidden overscroll-y-auto h-[90vh]">
             <div className="max-w-3xl mx-auto p-4 space-y-8">
-              <h1 className="text-xl font-bold">QUOTE SUMMARY</h1>
+              {/* <h1 className="text-3xl font-bold">QUOTE SUMMARY</h1> */}
 
               {/* Product Section */}
 
               {cartItems.map((citem) => (
-                <Card key={citem.id} className="p-4 relative">
+                <Card key={citem.id} className="p-4 relative border-newprimary">
                   <button
                     onClick={() => dispatch(removeFromCart(citem.id))}
                     className=" absolute right-4 top-0"
                   >
-                    X
+                    <Image
+                      src={"/cross.png"}
+                      height={100}
+                      width={100}
+                      alt="X"
+                      className="h-4 w-auto mt-1"
+                    />
                   </button>
                   <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center pt-2">
                     <Image
@@ -377,10 +389,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
 
       {/* Backdrop */}
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-newprimary /30 z-40"
-          onClick={toggleSidebar}
-        ></div>
+        <div className="fixed inset-0   z-40" onClick={toggleSidebar}></div>
       )}
     </>
   );

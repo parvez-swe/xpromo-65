@@ -165,7 +165,9 @@ export default function Footer() {
               />
               {/* <Button className="w-full">Subscribe</Button> */}
             </div>
-            <div className="text-white text-sm mt-4">ABN 39 671 474 141</div>
+            <div className="text-white text-sm mt-4 italic">
+              ABN 39 671 474 141
+            </div>
           </div>
         </div>
 
@@ -173,7 +175,9 @@ export default function Footer() {
         <div className=" flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flexflex-colmd:flex-rowgap-6 grid grid-cols-1 md:grid-cols-5 items-end  w-full ">
             <div className=" flex flex-col justify-end  ">
-              <p className="text-2xl mb-4 uppercase text-zinc-300">Follow Us</p>
+              <p className="text-base mb-4 uppercase text-zinc-300">
+                Follow Us
+              </p>
               <div className="flex gap-4">
                 <a href="#" className="hover:text-white">
                   <Image
@@ -218,7 +222,7 @@ export default function Footer() {
 
               <a
                 href="tel:1300123456"
-                className="flex items-center gap-2 ext-white"
+                className="flex items-center gap-2 ext-white italic"
               >
                 <Phone className="w-5 h-5" />
                 1300 123 456

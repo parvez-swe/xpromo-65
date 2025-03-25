@@ -25,7 +25,7 @@ export default function ContactForm() {
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Left Column */}
-          <div className="space-y-6  h-full flex flex-col items-center justify-center">
+          <div className="space-y-6  h-full flex flex-col items-start justify-center">
             <div>
               <h2 className="  text-xl font-bold ">Your merch, made easy</h2>
               <p className="  text-base ">
@@ -33,7 +33,7 @@ export default function ContactForm() {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 ml-10">
               <div className="flex items-center gap-3">
                 <div className="rounded-full bg-newsecondary  p-1">
                   <Check className="w-4 h-4 text-white" />
@@ -59,8 +59,10 @@ export default function ContactForm() {
                 </span>
               </div>
             </div>
-            <div className=" w-[30%]">
-              <Lottie animationData={ContactUsAnimation} loop={true} />
+            <div className=" w-full flex items-center justify-center">
+              <div className=" w-[30%]">
+                <Lottie animationData={ContactUsAnimation} loop={true} />
+              </div>
             </div>
           </div>
 
@@ -101,26 +103,29 @@ export default function ContactForm() {
 
         {/* Footer */}
         <div className=" flex items-center justify-center">
-          <div className="mt-8  bg-newprimary w-[20vw] px-20 rounded-full text-white  py-5 mb-10">
+          <div className="mt-8  bg-newprimary w-[300px] px-10 rounded-full text-white  py-5 mb-10">
             <div className="">
-              <div className=" grid  grid-cols-2 gap-2 mb-5">
+              <div className=" flex flex-row  mb-3">
                 <Mail className="w-6 h-6" />
-                <div>
+                <div className="flex-1">
                   <h1 className="  w-full text-center text-xs font-semibold">
                     info@xpromo.com.au
                   </h1>
                 </div>
               </div>
-              <div className=" grid  grid-cols-2 gap-2">
-                <Image
-                  src="/nav/teliphone-white.png"
-                  width={30}
-                  height={30}
-                  alt="phone"
-                  className="w-6 h-6"
-                />
-                <div>
-                  <h1 className=" text-center w-full italic text-xs font-semibold">
+              <div className=" flex flex-row items-center">
+                <div className="">
+                  <Image
+                    src="/nav/teliphone-white.png"
+                    width={30}
+                    height={30}
+                    alt="phone"
+                    className="w-6 h-6"
+                  />
+                </div>
+
+                <div className="flex-1 ">
+                  <h1 className="  text-center w-full italic text-xs font-semibold">
                     1300 123 456
                   </h1>
                 </div>

@@ -26,6 +26,7 @@ export default {
       colors: {
         newprimary: "#05172D",
         newsecondary: "#BAD2FF",
+        graytext: "#808080",
         vsbg: "#A2A2A2",
         blackLogo: "#282828",
         primaryColor: "#C7C7C7",

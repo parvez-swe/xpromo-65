@@ -22,13 +22,13 @@ export function FilterSidebar({
           {categories.map((category: any) => (
             <div key={category.categoryName}>
               {category.categoryName === "Shop By Category" && (
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-4 gap-1">
                   {category.subcategories?.map((subcat: any) => (
                     <button
                       key={subcat.categoryName}
-                      className={`group border border-black flex items-center justify-center py-2 px-2 rounded-full ${
+                      className={`group border-2 border-newprimary flex items-center justify-center py-1 px-2 rounded-full ${
                         selectedCategory === subcat.categoryName
-                          ? "bg-black"
+                          ? "bg-newprimary"
                           : ""
                       }`}
                       // onClick={() => onCategorySelect(subcat.categoryName)}
@@ -63,10 +63,10 @@ export function FilterSidebar({
           {ranges.map((range: any) => (
             <button
               key={range.name}
-              className={`group w-full py-1 flex flex-col items-center justify-center text-xs border-2  border-newprimary rounded-full ${
+              className={`group w-full py- flex flex-col items-center justify-center text-xs border-2  border-newprimary rounded-full ${
                 selectedRange === range.name
-                  ? "bg-black text-white"
-                  : "border-black"
+                  ? "bg-newprimary text-white"
+                  : "border-newprimary"
               }`}
               onClick={() => onRangeSelect(range.name)}
             >

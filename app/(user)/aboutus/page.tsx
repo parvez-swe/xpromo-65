@@ -3,12 +3,12 @@ import { Check, SquareCheck } from "lucide-react";
 export default function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen">
-      <section className="py-12 md:py-16 lg:py-20  max-w-7xl mx-auto">
+      <section className="py-20  max-w-7xl mx-auto">
         <BreadCrumbCustom
           currentPage={"ABOUT US"}
           previousPages={[{ name: "HOME", url: "/" }]}
         />
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-newprimary my-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-newprimary mt-5 mb-12">
           ABOUT US
         </h1>
 
@@ -21,8 +21,8 @@ export default function AboutUs() {
             sourcing, and innovation into every aspect of what we do.
           </p>
 
-          <div className="space-y-2">
-            <h2 className="text-xl font-bold text-newprimary">Our Mission</h2>
+          <div className="">
+            <h2 className=" font-bold text-newprimary">Our Mission</h2>
             <p className="text-newprimary">
               We&apos;re on a mission to change the promotional product industry
               for the better. Traditionally, branded merchandise has contributed
@@ -37,7 +37,7 @@ export default function AboutUs() {
           </div>
 
           <div className="">
-            <h2 className="text-xl font-bold text-newprimary">Our Values</h2>
+            <h2 className=" font-bold text-newprimary">Our Values</h2>
 
             <div className="">
               <p className="text-newprimary ">
@@ -73,15 +73,17 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h2 className="text-xl font-bold text-newprimary">
-              What Sets Us Apart?
-            </h2>
-            <p className="text-newprimary">
-              At Xpromo, we&apos;re not just another promotional product
-              company—we&apos;re a forward-thinking brand committed to making a
-              difference. Here&apos;s what makes us unique:
-            </p>
+          <div className="">
+            <div className="mb-4">
+              <h2 className=" font-bold text-newprimary">
+                What Sets Us Apart?
+              </h2>
+              <p className="text-newprimary">
+                At Xpromo, we&apos;re not just another promotional product
+                company—we&apos;re a forward-thinking brand committed to making
+                a difference. Here&apos;s what makes us unique:
+              </p>
+            </div>
 
             <div className=" text-newprimary ">
               <p className="text-newprimary ">
@@ -124,7 +126,7 @@ export default function AboutUs() {
           </div>
 
           <div className="mt-2">
-            <h2 className="text-xl font-bold text-newprimary">
+            <h2 className=" font-bold text-newprimary">
               Join Us in Creating a Better Future
             </h2>
             <p className="text-newprimary">

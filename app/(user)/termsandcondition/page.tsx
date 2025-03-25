@@ -9,14 +9,14 @@ export default function TermsAndConditions() {
           previousPages={[{ name: "HOME", url: "/" }]}
         />
 
-        <h1 className="text-3xl font-bold text-center text-gray-900 my-12">
+        <h1 className="text-3xl font-bold text-center text-gray-900 mb-12 mt-5">
           TERMS & CONDITIONS
         </h1>
 
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-8  mx-auto">
           <div>
             <p className="font-semibold">1. Agreement to Terms</p>
-            <p className="mt-1">
+            <p className="">
               By making a purchase from Xpromo (&quot;Seller&quot;), the
               customer (&quot;Buyer&quot;) acknowledges and agrees to abide by
               these Terms and Conditions. These terms govern all present and
@@ -29,7 +29,7 @@ export default function TermsAndConditions() {
             <p className="font-semibold">
               2. Order Submission and Communication
             </p>
-            <p className="mt-1">
+            <p className="">
               To ensure accuracy and avoid miscommunication, all purchase orders
               must be submitted in writing, preferably via email. This allows
               for proper documentation of the customer&apos;s requirements and
@@ -41,7 +41,7 @@ export default function TermsAndConditions() {
             <p className="font-semibold">
               3. Payment Terms and Transaction Fees
             </p>
-            <p className="mt-1">
+            <p className="">
               Full payment must be received before production unless otherwise
               agreed in writing. Payments made via credit card are subject to a
               1.75% transaction fee. Visa, Mastercard, and American Express.
@@ -54,7 +54,7 @@ export default function TermsAndConditions() {
             <p className="font-semibold">
               4. Ownership and Responsibility for Goods
             </p>
-            <p className="mt-1">
+            <p className="">
               Until payment has been received in full, all products remain the
               property of Xpromo. Responsibility for the goods transfers to the
               customer once the order has been dispatched.
@@ -65,7 +65,7 @@ export default function TermsAndConditions() {
             <p className="font-semibold">
               5. Product Availability and Variability
             </p>
-            <p className="mt-1">
+            <p className="mt-2">
               Stock Status: Product availability is subject to change, and
               certain items may become unavailable or discontinued.
             </p>
@@ -95,7 +95,7 @@ export default function TermsAndConditions() {
 
           <div>
             <p className="font-semibold">6. Artwork Submission and Approval</p>
-            <p className="mt-1">
+            <p className="">
               For optimal results, customers must provide artwork in the correct
               format, following our specified guidelines before proceeding to
               production. Xpromo will provide an artwork proof, which the
@@ -106,7 +106,7 @@ export default function TermsAndConditions() {
 
           <div>
             <p className="font-semibold">7. Shipping and Handling Fees</p>
-            <p className="mt-1">
+            <p className="">
               Freight and handling charges apply to all orders and will be
               included in the final invoice. Shipping costs vary based on order
               size, weight, and delivery location, and customers are responsible
@@ -118,7 +118,7 @@ export default function TermsAndConditions() {
             <p className="font-semibold">
               8. Late Payments and Debt Collection
             </p>
-            <p className="mt-1">
+            <p className="">
               Invoices not paid by the due date may incur late fees. If payment
               remains outstanding, the debt may be assigned to a collection
               agency, with all related legal and recovery costs borne by the
@@ -128,7 +128,7 @@ export default function TermsAndConditions() {
 
           <div>
             <p className="font-semibold">9. Amendments and Cancellations</p>
-            <p className="mt-1">
+            <p className="">
               Changes or cancellations to orders are subject to the following
               conditions:
             </p>
@@ -151,7 +151,7 @@ export default function TermsAndConditions() {
 
           <div>
             <p className="font-semibold">10. Returns and Faulty Goods</p>
-            <p className="mt-1">
+            <p className="">
               If goods are defective, customers must notify Xpromo in writing
               within seven days of receiving the order. Items must be returned
               in their original condition at the customer&apos;s expense. Xpromo
@@ -162,7 +162,7 @@ export default function TermsAndConditions() {
 
           <div>
             <p className="font-semibold">11. Legal Liability and Limitations</p>
-            <p className="mt-1">
+            <p className="">
               Xpromo is not responsible for indirect losses, damages, or delays
               caused by unforeseen circumstances, including supplier shortages,
               shipping issues, or natural disasters. Our liability is limited to
@@ -173,7 +173,7 @@ export default function TermsAndConditions() {
 
           <div>
             <p className="font-semibold">12. Warranty Coverage</p>
-            <p className="mt-1">
+            <p className="">
               Unless explicitly stated, all implied warranties are excluded to
               the maximum extent permitted by law. However, any manufacturer
               warranties available will be passed on to the customer.
@@ -182,7 +182,7 @@ export default function TermsAndConditions() {
 
           <div>
             <p className="font-semibold">13. Privacy and Confidentiality</p>
-            <p className="mt-1">
+            <p className="mt-2">
               Xpromo handles customer information in compliance with Australian
               privacy regulations.
             </p>
@@ -197,7 +197,7 @@ export default function TermsAndConditions() {
             <p className="font-semibold">
               14. Governing Law and Dispute Resolution
             </p>
-            <p className="mt-1">
+            <p className="">
               These Terms and Conditions are governed by Australian law. Any
               legal disputes arising under these terms shall be settled in
               Australian courts.
@@ -206,7 +206,7 @@ export default function TermsAndConditions() {
 
           <div>
             <p className="font-semibold">15. Policy Modifications</p>
-            <p className="mt-1">
+            <p className="">
               Xpromo reserves the right to revise these terms at any time.
               Continued use of our services and purchases will be considered
               acceptance of the updated terms.

@@ -5,6 +5,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 // import Lottie from "lottie-react";
 import popularAnimation from "@/public/home/popularAnimation.json";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 // This would typically come from your data source
 const relatedProducts = [
   {
@@ -54,9 +55,12 @@ export function PopularProducts() {
             SUPPLIERS.
           </h2> */}
             <div className=" flex-1  flex flex-col items-center justify-center">
-              <button className=" w-52 text-xs text-[#073409] font-bold rounded-3xl border-2 border-newprimary py-3 ">
+              <Link
+                href="/sustainabilitypolicy"
+                className=" w-52 text-xs text-[#073409] text-center  font-bold rounded-3xl border-2 border-[#073409] py-3 "
+              >
                 View Suistanability Policy
-              </button>
+              </Link>
             </div>
           </div>
           <div className="-mb-2">
@@ -68,14 +72,17 @@ export function PopularProducts() {
               suppliers.
             </h2>
             <div className=" flex-1  flex flex-col items-center justify-center">
-              <button className="  w-52 text-xs text-[#073409] font-bold rounded-3xl border-2 border-[#073409] py-3 px-2">
+              <Link
+                href={"/categories/eco-products"}
+                className="  w-52 text-xs text-center text-[#073409] font-bold rounded-3xl border-2 border-[#073409] py-3 px-2"
+              >
                 Browse Echo Products
-              </button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full px-4 py-6  bg-[#568756] flex flex-col items-center border-t ">
+      <div className="w-full px-4 py-6  bg-[#568756] flex flex-col items-center border-t-2 border-white ">
         <div className=" max-w-[1280px]">
           <h2 className="text-lg text-center text-white  pl-5 font-bold tracking-tight ">
             Popular Sustainable Products

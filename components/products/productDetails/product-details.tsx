@@ -37,20 +37,23 @@ export function ProductDetails() {
           {/* Description */}
           <div>
             <h2 className="mb-2 text-lg font-semibold lg:text-xl">
-              DESCRIPTION
+              Description
             </h2>
             <p className="text-sm text-gray-700 lg:text-base">
               Delight your customers and reward your team for years to come with
               the Nike Men&apos;s Team Legend Tee. Made from recycled polyester.
-              Add your company logo and make it yours!
             </p>
+            <p className="mt-2">Add your company logo and make it yours!</p>
             <button className="mt-2 text-newprimary font-bold hover:underline">
               Read more...
             </button>
           </div>
 
           <div className=" grid grid-cols-3 mt-2 ">
-            <h2 className=" font-bold text-lg ">Quantity:</h2>
+            <div className=" flex items-center justify-center">
+              <h2 className=" font-bold text-lg ">Quantity:</h2>
+            </div>
+
             {/* Quantity */}
 
             <div className="flex flex-row items-center justify-center">
@@ -104,11 +107,11 @@ export function ProductDetails() {
           {/* Special Instructions */}
           <div>
             <h2 className="mb-2 text-lg font-semibold lg:text-xl">
-              SPECIAL INSTRUCTIONS
+              Specialty Instructions
             </h2>
             <Textarea
               placeholder="PRINT POSITION, COLOURS, DIFFERENT QUANTITIES AND SIZES ETC."
-              className=" italic  min-h-[100px] bg-gray-50 rounded-3xl"
+              className=" italic placeholder:text-xs  min-h-[100px] bg-gray-50 rounded-3xl"
             />
           </div>
 
