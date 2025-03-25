@@ -60,7 +60,7 @@ export default function ContactForm() {
               </div>
             </div>
             <div className=" w-full flex items-center justify-center">
-              <div className=" w-[30%]">
+              <div className="">
                 <Lottie animationData={ContactUsAnimation} loop={true} />
               </div>
             </div>
@@ -70,28 +70,28 @@ export default function ContactForm() {
           <div className="bg-newsecondary rounded-3xl p-6 space-y-4">
             <div className="grid grid-cols-2 gap-4 ">
               <div>
-                <label className="text-xs font-bold">Name</label>
+                <label className="text-xs font-bold ml-2">Name</label>
                 <Input className="bg-white rounded-full" />
               </div>
               <div>
-                <label className="text-xs font-bold">Company</label>
+                <label className="text-xs font-bold ml-2">Company</label>
                 <Input className="bg-white rounded-full" />
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="text-xs font-bold">Phone</label>
+                <label className="text-xs font-bold ml-2">Phone</label>
                 <Input className="bg-white rounded-full" type="tel" />
               </div>
               <div>
-                <label className="text-xs font-bold">Business Email</label>
+                <label className="text-xs font-bold ml-2">Business Email</label>
                 <Input className="bg-white rounded-full" type="email" />
               </div>
             </div>
 
             <div>
-              <label className="text-xs font-bold">Message</label>
+              <label className="text-xs font-bold ml-2">Message</label>
               <Textarea className="bg-white rounded-lg  resize-none h-32" />
             </div>
 
