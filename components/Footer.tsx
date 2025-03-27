@@ -29,7 +29,7 @@ export default function Footer() {
             <ul className="space-y-1 text-xs text-white ">
               <li>
                 <a href="/aboutus" className="ext-white">
-                  Abut Us
+                  About Us
                 </a>
               </li>
               <li>

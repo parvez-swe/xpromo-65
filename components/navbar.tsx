@@ -197,7 +197,7 @@ export function Navbar() {
       </div>
       <div className="relative">
         <div className="bg-newprimary ">
-          <div className="py-2 grid grid-cols-6 gap-2  max-w-[1280px] mx-auto">
+          <div className="py-2 grid grid-cols-6 gap-2  max-w-[1280px]  mx-auto">
             {category.map((nav: any) => (
               <div key={nav.categoryName} className="relative">
                 <>
@@ -315,29 +315,22 @@ export function Navbar() {
                       >
                         <DropdownMenuTrigger asChild>
                           <div
-                            className={`group/trigger flex text-sm font-bold items-center justify-between px-2 py-2 rounded-full cursor-pointer transition-all
-                          ${
-                            nav.categoryName === "Eco-Products"
-                              ? "bg-green-800 text-white"
-                              : "bg-white text-newprimary"
-                          }
-                          ${
-                            nav.categoryName === "Shop By Category"
-                              ? "border border-newprimary hover:bg-newprimary hover:text-white hover:border-white data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white"
-                              : "border border-transparent"
-                          }`}
+                          className={`group/trigger flex text-sm font-bold items-center justify-between px-3 py-2 rounded-full cursor-pointer transition-all
+                            ${nav.categoryName === "Eco-Products" ? "bg-green-800 text-white" : ""}
+                            ${nav.categoryName === "Shop By Category" ? "border border-white  bg-newprimary text-white hover:bg-newprimary hover:text-white hover:border-white data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white" : ""}
+                          `}
                           >
                             <div className="bg-transparent flex justify-between items-center w-full">
                               {nav.categoryName === "24 HOURS" && <p>⭐</p>}
 
-                              <p className="uppercase">{nav.categoryName}</p>
+                              <p className="uppercase ">{nav.categoryName}</p>
 
                               {nav.categoryName !== "Eco-Products" && (
                                 <ChevronDown
                                   className={`h-5 w-5 ${
                                     nav.categoryName === "Shop By Category"
-                                      ? "text-newprimary transition-all group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"
-                                      : "text-newprimary"
+                                      ? "text-white transition-all group-hover/trigger:text-white group-data-[state=open]/trigger:text-white"
+                                      : "text-white"
                                   }`}
                                 />
                               )}
