@@ -63,7 +63,7 @@ export function FilterSidebar({
           {ranges.map((range: any) => (
             <button
               key={range.name}
-              className={`group w-full py- flex flex-col items-center justify-center text-xs border-2  border-newprimary rounded-full ${
+              className={`group w-full py- flex flex-col items-center justify-center text-xs border-2 py-1.5  border-newprimary rounded-full ${
                 selectedRange === range.name
                   ? "bg-newprimary text-white"
                   : "border-newprimary"
@@ -80,7 +80,9 @@ export function FilterSidebar({
                   selectedRange === range.name ? "invert" : ""
                 }`}
               />
-              <p className="text-center text-[8px] font-bold">{range.name}</p>
+              <p className="text-center text-[8px] leading-tight font-bold">
+                {range.name}
+              </p>
             </button>
           ))}
         </div>
