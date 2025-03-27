@@ -68,7 +68,8 @@ export function FilterSidebar({
                   ? "bg-newprimary text-white"
                   : "border-newprimary"
               }`}
-              onClick={() => onRangeSelect(range.name)}
+              // onClick={() => onRangeSelect(range.name)}
+              onMouseOver={() => onRangeSelect(range.name)}
             >
               <Image
                 src={range.image}

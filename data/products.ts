@@ -761,40 +761,41 @@ export const WithfactoryDirect = [
     imageUrl: "/image/Shop-by-industry.svg",
     subcategories: [
       {
-        categoryName: "Automotive",
-        imageUrl: "/image/Shop-by-Industry/auto.svg",
-        subcategories: [],
-      },
-      {
-        categoryName: "Construction",
-        imageUrl: "/image/Shop-by-Industry/constructions.svg",
-        subcategories: [],
-      },
-      {
-        categoryName: "Education",
-        imageUrl: "/image/Shop-by-Industry/school.svg",
-        subcategories: [],
-      },
-      {
         categoryName: "Hospitality",
-        imageUrl: "/image/Shop-by-Industry/hospitality.svg",
+        imageUrl: "/hospitality.svg",
         subcategories: [],
       },
       {
         categoryName: "Medical",
-        imageUrl: "/image/Shop-by-Industry/Medical.svg",
+        imageUrl: "/Medical.svg",
         subcategories: [],
       },
       {
-        categoryName: "Real Estate",
-        imageUrl: "/image/Shop-by-Industry/realestate.svg",
+        categoryName: "Education",
+        imageUrl: "/school.svg",
+        subcategories: [],
+      },
+      {
+        categoryName: "Automotive",
+        imageUrl: "/auto.svg",
         subcategories: [],
       },
       {
         categoryName: "Sports & Fitness",
-        imageUrl: "/image/Shop-by-Industry/sport.svg",
+        imageUrl: "/sport.svg",
         subcategories: [],
       },
+      {
+        categoryName: "Real Estate",
+        imageUrl: "/realestate.svg",
+        subcategories: [],
+      },
+
+      // {
+      //   categoryName: "Construction",
+      //   imageUrl: "/constructions.svg",
+      //   subcategories: [],
+      // },
     ],
   },
 
@@ -1552,21 +1553,6 @@ export const withoutFactoryDirect = [
     imageUrl: "/image/Shop-by-industry.svg",
     subcategories: [
       {
-        categoryName: "Automotive",
-        imageUrl: "/auto.svg",
-        subcategories: [],
-      },
-      {
-        categoryName: "Construction",
-        imageUrl: "/constructions.svg",
-        subcategories: [],
-      },
-      {
-        categoryName: "Education",
-        imageUrl: "/school.svg",
-        subcategories: [],
-      },
-      {
         categoryName: "Hospitality",
         imageUrl: "/hospitality.svg",
         subcategories: [],
@@ -1577,8 +1563,13 @@ export const withoutFactoryDirect = [
         subcategories: [],
       },
       {
-        categoryName: "Real Estate",
-        imageUrl: "/realestate.svg",
+        categoryName: "Education",
+        imageUrl: "/school.svg",
+        subcategories: [],
+      },
+      {
+        categoryName: "Automotive",
+        imageUrl: "/auto.svg",
         subcategories: [],
       },
       {
@@ -1586,6 +1577,17 @@ export const withoutFactoryDirect = [
         imageUrl: "/sport.svg",
         subcategories: [],
       },
+      {
+        categoryName: "Real Estate",
+        imageUrl: "/realestate.svg",
+        subcategories: [],
+      },
+
+      // {
+      //   categoryName: "Construction",
+      //   imageUrl: "/constructions.svg",
+      //   subcategories: [],
+      // },
     ],
   },
   {
@@ -1642,19 +1644,24 @@ export const withoutFactoryDirect = [
     ],
     ourBrands: [
       { icon: "/image/OurBrands/Adidas-1.png", title: "Adidas" },
+      { icon: "/image/OurBrands/ascolour.png", title: "Ascolour" },
+
       { icon: "/image/OurBrands/Bellroy-1.png", title: "Bellroy" },
-      { icon: "/image/OurBrands/Bic-1.png", title: "Bic" },
       { icon: "/image/OurBrands/Blunt-1.png", title: "Blunt" },
       { icon: "/image/OurBrands/Callaway-1.png", title: "Callaway" },
       { icon: "/image/OurBrands/Camelbak-1.png", title: "Camelbak" },
-      { icon: "/image/OurBrands/Coleman-1.png", title: "Coleman" },
       { icon: "/image/OurBrands/Flexfit-1.png", title: "Flexfit" },
       { icon: "/image/OurBrands/Footjoy-1.png", title: "Footjoy" },
       { icon: "/image/OurBrands/HellyHansen-1.png", title: "Helly Hansen" },
+      { icon: "/image/OurBrands/hexa.png", title: "hexa" },
       { icon: "/image/OurBrands/Moleskine-1.png", title: "Moleskine" },
       { icon: "/image/OurBrands/Nike-1.png", title: "Nike" },
       { icon: "/image/OurBrands/Thule-1.png", title: "Thule" },
       { icon: "/image/OurBrands/Titleist-1.png", title: "Titleist" },
+      { icon: "/image/OurBrands/swisspeak.png", title: "swisspeak" },
+
+      // { icon: "/image/OurBrands/Bic-1.png", title: "Bic" },
+      // { icon: "/image/OurBrands/Coleman-1.png", title: "Coleman" },
       { icon: "/image/OurBrands/UnderArmour-1.png", title: "Under Armour" },
     ],
   },

@@ -42,20 +42,29 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
         onClick={toggleSidebar}
         className="flex items-center gap-2  cursor-pointer relative mr-2"
       >
-        <p
-          className={`w-fit  ${
-            !isFactoryDirect
-              ? "   text-white bg-newprimary "
-              : "text-white bg-newprimary"
-          }  rounded-full flex items-center justify-center absolute -top-3 -right-3    text-xs  min-h-5 min-w-5 text-center`}
-        >
-          {totalQty}
-        </p>
+        {totalQty > 0 && (
+          <p
+            className={`w-fit  ${
+              !isFactoryDirect
+                ? "   text-white bg-newprimary "
+                : "text-white bg-newprimary"
+            }  rounded-full flex items-center justify-center absolute -top-2 -right-2    text-xs  min-h-5 min-w-5 text-center`}
+          >
+            {totalQty}
+          </p>
+        )}
 
-        <ShoppingCart
+        {/* <ShoppingCart
           className={` ${
             !isFactoryDirect ? " text-newprimary " : "text-newprimary"
           } h-7 w-7`}
+        /> */}
+        <Image
+          src="/cart.png"
+          className="h-10 w-auto"
+          width={100}
+          height={100}
+          alt="phone"
         />
       </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ChevronDown, ChevronRight, Search } from "lucide-react";
+import { ChevronDown, ChevronRight, Phone, Search } from "lucide-react";
 import Image from "next/image";
 import { Input } from "./ui/input";
 import { Sidebar } from "./sidebar/sidebar";
@@ -131,23 +131,13 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex items-center justify-center gap-2">
             <Link href="/">
-              {!isFactoryDirect ? (
-                <Image
-                  src="/image/logo.png"
-                  alt="XPromo Logo"
-                  width={140}
-                  height={140}
-                  className="object-contain mr-5"
-                />
-              ) : (
-                <Image
-                  src="/image/logo.png"
-                  alt="XPromo Logo"
-                  width={140}
-                  height={140}
-                  className="object-contain mr-5"
-                />
-              )}
+              <Image
+                src="/xpromo.png"
+                alt="XPromo Logo"
+                width={500}
+                height={500}
+                className="object-contain mr-5 h-16 w-auto"
+              />
             </Link>
           </div>
 
@@ -171,8 +161,7 @@ export function Navbar() {
 
             <div className="mr-8">
               <a href="tel:+8801891802883">
-                {/* <Phone className={` ${!isFactoryDirect ? " text-white " : ""}`} /> */}
-                {isFactoryDirect ? (
+                {/* {isFactoryDirect ? (
                   <Image
                     src="/nav/teliphone-black.png"
                     width={30}
@@ -180,13 +169,15 @@ export function Navbar() {
                     alt="phone"
                   />
                 ) : (
-                  <Image
-                    src="/nav/teliphone-black.png"
-                    width={30}
-                    height={30}
-                    alt="phone"
-                  />
-                )}
+                 
+                )} */}{" "}
+                <Image
+                  src="/phone.png"
+                  className="h-10 w-auto"
+                  width={100}
+                  height={100}
+                  alt="phone"
+                />
               </a>
             </div>
 
@@ -240,9 +231,9 @@ export function Navbar() {
                                     <Image
                                       src={brand.icon}
                                       alt={brand.title}
-                                      width={50}
-                                      height={50}
-                                      className=""
+                                      width={500}
+                                      height={500}
+                                      className=" h-7 w-auto"
                                     />
                                   )}
                                 </DropdownMenuItem>{" "}
@@ -273,7 +264,7 @@ export function Navbar() {
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className="w-64 text-xs">
                           <DropdownMenuGroup>
-                            <div className=" grid grid-cols-2 ">
+                            <div className=" grid grid-cols-2 gap-5 py-5 ">
                               {nav?.subcategories?.map((industry: any) => (
                                 <DropdownMenuItem
                                   key={industry.imageUrl}
@@ -285,15 +276,14 @@ export function Navbar() {
                                       .toLowerCase()}`}
                                     className="w-full flex items-center justify-center"
                                   >
-                                    {console.log(industry.imageUrl)}
                                     {industry.imageUrl && (
                                       <Image
                                         priority
                                         src={industry.imageUrl}
                                         alt={industry.categoryName}
-                                        width={50}
-                                        height={50}
-                                        className="h-8 w-8  object-contain"
+                                        width={200}
+                                        height={200}
+                                        className="h-12 w-autho  object-contain"
                                       />
                                     )}
                                   </Link>
@@ -315,9 +305,17 @@ export function Navbar() {
                       >
                         <DropdownMenuTrigger asChild>
                           <div
-                          className={`group/trigger flex text-sm font-bold items-center justify-between px-3 py-2 rounded-full cursor-pointer transition-all
-                            ${nav.categoryName === "Eco-Products" ? "bg-green-800 text-white" : ""}
-                            ${nav.categoryName === "Shop By Category" ? "border border-white  bg-newprimary text-white hover:bg-newprimary hover:text-white hover:border-white data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white" : ""}
+                            className={`group/trigger flex text-sm font-bold items-center justify-between px-3 py-2 rounded-full cursor-pointer transition-all
+                            ${
+                              nav.categoryName === "Eco-Products"
+                                ? "bg-green-800 text-white"
+                                : ""
+                            }
+                            ${
+                              nav.categoryName === "Shop By Category"
+                                ? "border border-white  bg-newprimary text-white hover:bg-newprimary hover:text-white hover:border-white data-[state=open]:bg-newprimary data-[state=open]:text-white data-[state=open]:border-white"
+                                : ""
+                            }
                           `}
                           >
                             <div className="bg-transparent flex justify-between items-center w-full">
@@ -337,7 +335,7 @@ export function Navbar() {
                             </div>
                           </div>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent className=" w-72 text-xs">
+                        <DropdownMenuContent className=" w-72 rounded-xl">
                           <DropdownMenuGroup>
                             {nav.subcategories.map((subsubcat: any, i: any) => (
                               <React.Fragment key={i}>
@@ -390,7 +388,7 @@ export function Navbar() {
                                       </div>
                                     </DropdownMenuSubTrigger>
                                     <DropdownMenuPortal>
-                                      <DropdownMenuSubContent>
+                                      <DropdownMenuSubContent className=" rounded-xl">
                                         {subsubcat.subcategories.map(
                                           (subsubsubcat: any, j: any) => (
                                             <Link
@@ -401,7 +399,7 @@ export function Navbar() {
                                               className=" font-bold"
                                             >
                                               {" "}
-                                              <DropdownMenuItem className="text-[10px] hover:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent rounded-full">
+                                              <DropdownMenuItem className="text-[10px] px-3 mx-3 hover:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent rounded-full">
                                                 {subsubsubcat.categoryName}
                                               </DropdownMenuItem>{" "}
                                             </Link>
