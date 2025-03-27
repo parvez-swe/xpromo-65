@@ -106,7 +106,8 @@ export function FilterSidebar({
                           ? " text-white bg-newprimary border-newprimary"
                           : "border-newprimary text-newprimary"
                       }`}
-                      onClick={() => onStyleSelect(style.categoryName)}
+                      // onClick={() => onStyleSelect(style.categoryName)}
+                      onMouseOver={() => onStyleSelect(style.categoryName)}
                     >
                       {style.categoryName}
                     </button>
