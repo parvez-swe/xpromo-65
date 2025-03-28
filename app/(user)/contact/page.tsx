@@ -5,7 +5,7 @@ import PageWrapper from "@/components/PageWrapper";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Check, Mail } from "lucide-react";
+import { Check } from "lucide-react";
 import Image from "next/image";
 import ContactUsAnimation from "@/public/animation/ContactUsAnimation.json";
 import dynamic from "next/dynamic";
@@ -95,7 +95,7 @@ export default function ContactForm() {
               <Textarea className="bg-white rounded-3xl resize-none h-32" />
             </div>
 
-            <Button className="w-32 mx-auto block rounded-full bg-gray-800 hover:bg-gray-700">
+            <Button className="w-32 mx-auto block rounded-full bg-gray-800  font-bold">
               SUBMIT
             </Button>
           </div>

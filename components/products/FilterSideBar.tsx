@@ -64,12 +64,12 @@ export function FilterSidebar({
             <button
               key={range.name}
               className={`group w-full py- flex flex-col items-center justify-center text-xs border-2 py-1.5  border-newprimary rounded-full ${
-                selectedRange === range.name
+                selectedRange === range.slug
                   ? "bg-newprimary text-white"
                   : "border-newprimary"
               }`}
               // onClick={() => onRangeSelect(range.name)}
-              onMouseOver={() => onRangeSelect(range.name)}
+              onMouseOver={() => onRangeSelect(range.slug)}
             >
               <Image
                 src={range.image}
@@ -77,7 +77,7 @@ export function FilterSidebar({
                 width={30}
                 alt={range.name}
                 className={`h-5 w-5 lg:w-7 lg:h-7 ${
-                  selectedRange === range.name ? "invert" : ""
+                  selectedRange === range.slug ? "invert" : ""
                 }`}
               />
               <p className="text-center text-[8px] leading-tight font-bold">

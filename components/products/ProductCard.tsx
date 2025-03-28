@@ -7,6 +7,7 @@ import { addToCart } from "@/redux/slices/cartSlice";
 
 export function ProductCard({ product }: any) {
   const dispatch = useDispatch();
+  console.log(product.images[0]);
 
   return (
     <Card className="overflow-hidden border-newprimary text-newprimary">
@@ -14,7 +15,7 @@ export function ProductCard({ product }: any) {
         <Link href={`/categories/categoryid/${product.id}`}>
           <div className="w-full h-28 relative flex items-center justify-center overflow-hidden mt-5">
             <Image
-              src={product.images[0]}
+              src={`${product.images[0]}`}
               alt={product.name}
               width={500}
               height={112} // 28 * 4 = 112px
