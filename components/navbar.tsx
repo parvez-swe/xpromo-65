@@ -112,14 +112,14 @@ export function Navbar() {
                 </div>
               </div>
               <div className="ml-2 transition-opacity duration-300">
-                <div className={`${isScrolled ? "opacity-100" : "opacity-0"}`}>
+                <Link href="#lvsf" className="">
                   <Image
                     src="/nav/interrogation.svg"
                     width={20}
                     height={20}
                     alt="question mark"
                   />
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -254,7 +254,7 @@ export function Navbar() {
                       >
                         <DropdownMenuTrigger asChild>
                           <div className="bg-white  text-newprimary flex items-center justify-between px-3 py-2 rounded-full cursor-pointer">
-                            <div className="text-sm font-bold bg-transparent flex justify-between items-center w-full">
+                            <div className="text-sm font-bold bg-transparent flex justify-end items-center w-full">
                               <p className="mr-2 uppercase text-newprimary">
                                 {nav.categoryName}
                               </p>

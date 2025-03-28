@@ -53,7 +53,7 @@ export function CustomDatePicker({
             height={50}
             width={50}
           />
-          <div className="text-sm font-medium text-newprimary">
+          <div className="text-sm font-bold  italic text-newprimary">
             {formatDate(date)}
           </div>
         </button>

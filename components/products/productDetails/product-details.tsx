@@ -19,6 +19,7 @@ const productImages = [
 
 export function ProductDetails() {
   const [productCount, setProductCount] = useState(50);
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8 md:space-y-0 md:grid md:grid-cols-2 md:gap-8">
@@ -44,8 +45,20 @@ export function ProductDetails() {
               the Nike Men&apos;s Team Legend Tee. Made from recycled polyester.
             </p>
             <p className="mt-2">Add your company logo and make it yours!</p>
-            <button className="mt-2 text-newprimary font-bold hover:underline">
-              Read more...
+            {isDescriptionExpanded && (
+              <p className="mt-2">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos,
+                sed? Quisquam totam amet, inventore, maxime tempora quo nemo
+                obcaecati reiciendis cumque ipsam dicta ex optio rerum voluptas!
+                Ipsam, eos officia?
+              </p>
+            )}
+
+            <button
+              onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
+              className="mt-2 text-newprimary font-bold hover:underline"
+            >
+              {isDescriptionExpanded ? "Read less" : "Read more..."}
             </button>
           </div>
 

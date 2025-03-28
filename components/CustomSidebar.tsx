@@ -226,7 +226,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                     <AccordionContent className="px-6  space-y-4">
                       <div className="bg-newsecondary  rounded-3xl ">
                         <div className="mb-4 flex items-center ">
-                          <label className="block font-medium mr-5 text-[#3E6AA2]">
+                          <label className="block font-bold mr-5 text-[#3E6AA2]">
                             What&apos;s your taeget date?
                           </label>
                           <div className="flex items-center space-x-4 mt-2">
@@ -234,6 +234,17 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                               type="date"
                               className=" bg-newsecondary rounded-md shadow-sm focus:ring-newprimary focus:border-newprimary"
                             /> */}
+
+                            {!date && (
+                              <label className="flex items-center space-x-2">
+                                <button
+                                  onClick={() => setNoDeadline(true)}
+                                  className={`px-4 italic  text-[10px] h-6   rounded-full  border-2 border-newprimary focus:ring-2   focus: ring-newprimary focus: bg-newprimary text-white  `}
+                                >
+                                  No Deadline
+                                </button>
+                              </label>
+                            )}
                             {!nodeadline && (
                               <div>
                                 <CustomDatePicker
@@ -242,48 +253,38 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                                 />
                               </div>
                             )}
-
-                            {!date && (
-                              <label className="flex items-center space-x-2">
-                                <button
-                                  onClick={() => setNoDeadline(true)}
-                                  className={`px-4 italic  text-[10px] h-6   rounded-full  border-2 border-newprimary focus:ring-2   focus: ring-newprimary focus: ${
-                                    nodeadline
-                                      ? "bg-newprimary text-white"
-                                      : "text-newprimary"
-                                  } focus: text-white  `}
-                                >
-                                  No Deadline
-                                </button>
-                              </label>
-                            )}
                           </div>
                         </div>
+                        {/* line 1 */}
+                        <div className=" flex justify-center items-center">
+                          <div className="w-[90%] h-px bg-white my-2" />
+                        </div>
+                        <div className="flex items-center justify-center">
+                          <div className=" gap-3 pt-5 flex flex-row">
+                            <label
+                              htmlFor="logo"
+                              className=" px-4  italic  rounded-full  border-2 border-newprimary cursor-pointer text-white bg-newprimary text focus:ring-2  focus:ring-newprimary focus:bg-newprimary focus:text-white  font-medium "
+                            >
+                              UPLOAD YOUR LOGO
+                            </label>
 
-                        <div className=" gap-3 pt-5 flex flex-row">
-                          <label
-                            htmlFor="logo"
-                            className=" px-4  italic  rounded-full  border-2 border-newprimary cursor-pointer text-white bg-newprimary text focus:ring-2  focus:ring-newprimary focus:bg-newprimary focus:text-white  font-medium "
-                          >
-                            UPLOAD YOUR LOGO
-                          </label>
-
-                          <input
-                            id="logo"
-                            type="file"
-                            className="mt-2 hidden w-full border rounded-md bg-white shadow-sm focus:ring-newprimary focus:border-newprimary"
-                          />
-                          <p className=" text-sm text-[#7A869F] italic flex items-center justify-center uppercase">
-                            EPS, AI, or SVG preferred
-                          </p>
+                            <input
+                              id="logo"
+                              type="file"
+                              className="mt-2 hidden w-full border rounded-md bg-white shadow-sm focus:ring-newprimary focus:border-newprimary"
+                            />
+                            <p className=" text-sm text-[#7A869F] italic flex items-center justify-center uppercase">
+                              EPS, AI, or SVG preferred
+                            </p>
+                          </div>
                         </div>
 
                         <div className=" mt-3">
                           {/* <label className="block font-medium"></label> */}
                           <textarea
-                            className="mt-2 w-full border rounded-full  h-16 px-5 pt-3 shadow-sm focus:ring-newprimary focus:border-newprimary"
+                            className="mt-2 w-full border rounded-full  h-16 px-5 pt-3 shadow-sm focus:ring-newprimary focus:border-newprimary italic"
                             //   rows="4"
-                            placeholder="ADITIONAL COMMENTS "
+                            placeholder="SPECIAL INSTRUCTIONS "
                           ></textarea>
                         </div>
                       </div>
@@ -314,7 +315,10 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                       <div className="">
                         <div className="grid bg-newsecondary px-4 rounded-3xl  grid-cols-2 gap-4">
                           <div className=" flex flex-col">
-                            <label className="text-[#3E6AA2]" htmlFor="Name">
+                            <label
+                              className="text-[#3E6AA2] font-bold"
+                              htmlFor="Name"
+                            >
                               Name
                             </label>
                             <input
@@ -326,7 +330,10 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                           </div>
 
                           <div className=" flex flex-col">
-                            <label className="text-[#4573A9]" htmlFor="company">
+                            <label
+                              className="text-[#4573A9]  font-bold"
+                              htmlFor="company"
+                            >
                               Company
                             </label>
                             <input
@@ -338,7 +345,10 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                           </div>
 
                           <div className=" flex flex-col text-[#3E6AA2]">
-                            <label className="text-[#4573A9]" htmlFor="phone">
+                            <label
+                              className="text-[#4573A9]  font-bold"
+                              htmlFor="phone"
+                            >
                               Phone Number
                             </label>
                             <input
@@ -351,7 +361,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                           <div className=" flex flex-col">
                             <label
                               className="text-[#4573A9]"
-                              htmlFor="email text-[#3E6AA2]"
+                              htmlFor="email text-[#3E6AA2]  font-bold"
                             >
                               Business Email
                             </label>
@@ -379,9 +389,12 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                 </div>
 
                 <p className="mt-4 text-start text-sm text-newprimary w-full">
-                  <span className=" font-bold ">What&apos;s next? </span> <br />{" "}
-                  After finalizing your product selection, submit your quote
-                  request. We will create free mock-ups and provide a quotation.
+                  <span className=" font-bold text-lg ">
+                    What&apos;s next?{" "}
+                  </span>{" "}
+                  <br /> After finalizing your product selection, submit your
+                  quote request. We will create free mock-ups and provide a
+                  quotation.
                 </p>
                 <p className=" uppercase font-bold text-sm">
                   no payment is required at this stage

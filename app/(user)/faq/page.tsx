@@ -3,7 +3,7 @@ import { BreadCrumbCustom } from "@/components/BreadCrumpCustom";
 export default function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen">
-      <section className="py-12 md:py-16 lg:py-20  max-w-7xl mx-auto">
+      <section className="py-20  max-w-7xl mx-auto">
         <BreadCrumbCustom
           currentPage={"FAQ"}
           previousPages={[{ name: "HOME", url: "/" }]}

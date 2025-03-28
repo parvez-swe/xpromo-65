@@ -1,5 +1,5 @@
 import { BreadCrumbCustom } from "@/components/BreadCrumpCustom";
-import { Check, SquareCheck } from "lucide-react";
+import { SquareCheck } from "lucide-react";
 export default function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen">

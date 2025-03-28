@@ -60,14 +60,14 @@ export default function ContactForm() {
               </div>
             </div>
             <div className=" w-full flex items-center justify-center">
-              <div className="">
+              <div className=" w-[280px]">
                 <Lottie animationData={ContactUsAnimation} loop={true} />
               </div>
             </div>
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-newsecondary rounded-3xl p-6 space-y-4">
+          <div className="bg-newsecondary rounded-3xl p-10 space-y-4 ">
             <div className="grid grid-cols-2 gap-4 ">
               <div>
                 <label className="text-xs font-bold ml-2">Name</label>
@@ -92,7 +92,7 @@ export default function ContactForm() {
 
             <div>
               <label className="text-xs font-bold ml-2">Message</label>
-              <Textarea className="bg-white rounded-lg  resize-none h-32" />
+              <Textarea className="bg-white rounded-3xl resize-none h-32" />
             </div>
 
             <Button className="w-32 mx-auto block rounded-full bg-gray-800 hover:bg-gray-700">
@@ -103,12 +103,18 @@ export default function ContactForm() {
 
         {/* Footer */}
         <div className=" flex items-center justify-center">
-          <div className="mt-8  bg-newprimary w-[300px] px-10 rounded-full text-white  py-5 mb-10">
+          <div className="mt-8  bg-newprimary w-[350px] px-10 rounded-full text-white  py-5 mb-10">
             <div className="">
               <div className=" flex flex-row  mb-3">
-                <Mail className="w-6 h-6" />
-                <div className="flex-1">
-                  <h1 className="  w-full text-center text-xs font-semibold">
+                <Image
+                  className="h-7 mr-4 w-auto"
+                  src={"/dark-mail.png"}
+                  height={200}
+                  width={200}
+                  alt="mail"
+                />
+                <div className="flex-1 ">
+                  <h1 className="  w-full text-center  font-semibold">
                     info@xpromo.com.au
                   </h1>
                 </div>
@@ -116,16 +122,16 @@ export default function ContactForm() {
               <div className=" flex flex-row items-center">
                 <div className="">
                   <Image
-                    src="/nav/teliphone-white.png"
-                    width={30}
-                    height={30}
+                    className="h-7 mr-4 w-auto"
+                    src={"/dark-phone.png"}
+                    height={200}
+                    width={200}
                     alt="phone"
-                    className="w-6 h-6"
                   />
                 </div>
 
                 <div className="flex-1 ">
-                  <h1 className="  text-center w-full italic text-xs font-semibold">
+                  <h1 className="  text-center w-full italic text- font-semibold">
                     1300 123 456
                   </h1>
                 </div>

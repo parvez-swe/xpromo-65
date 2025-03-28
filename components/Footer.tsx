@@ -1,4 +1,3 @@
-import { Mail, Phone } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
@@ -161,11 +160,11 @@ export default function Footer() {
               <Input
                 type="email"
                 // placeholder="Enter your email"
-                className="bg-white border-none rounded-full"
+                className="bg-white text-newprimary border-none rounded-full"
               />
               {/* <Button className="w-full">Subscribe</Button> */}
             </div>
-            <div className="text-white text-sm mt-4 italic">
+            <div className="text-white text-sm mt-4 italic font-bold">
               ABN 39 671 474 141
             </div>
           </div>
@@ -210,12 +209,18 @@ export default function Footer() {
             </div>
 
             <div className="md:col-span-4 flex flex-row ">
-              <div className=" border-r-2 border-white   pr-5 mr-5 h-10 flex ice justify-center">
+              <div className=" border-r-2 border-white   pr-8 mr-8 h-12 flex ice justify-center">
                 <a
                   href="mailto:info@xpromo.com.au"
-                  className="flex items-center gap-2 ext-white"
+                  className="flex items-center font-bold gap-2 ext-white"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Image
+                    className="h-7 mr-4 w-auto"
+                    src={"/dark-mail.png"}
+                    height={200}
+                    width={200}
+                    alt="mail"
+                  />
                   info@xpromo.com.au
                 </a>
               </div>
@@ -224,7 +229,14 @@ export default function Footer() {
                 href="tel:1300123456"
                 className="flex items-center gap-2 ext-white italic"
               >
-                <Phone className="w-5 h-5" />
+                {/* <Phone className="w-5 h-5" /> */}
+                <Image
+                  className="h-7 mr-4 w-auto"
+                  src={"/dark-phone.png"}
+                  height={200}
+                  width={200}
+                  alt="phone"
+                />
                 1300 123 456
               </a>
             </div>

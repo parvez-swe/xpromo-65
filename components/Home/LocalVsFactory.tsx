@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function LocalVsFactory() {
   return (
-    <div className="container mx-auto px-4 py-12 max-w-[1280px]">
+    <div id="lvf" className="container mx-auto px-4 py-12 max-w-[1280px]">
       <div className="grid grid-cols-12  justify-center pb-5 ">
         <div className=" col-span-2"></div>
         <h2 className="text-2xl text-[#05172D] font-bold text-center col-span-4 ">
@@ -94,9 +94,13 @@ function ComparisonItem({ icon, header, subText }: any) {
       {/* {icon} */}
       <Image src={icon} height={40} width={40} alt="icon" />
       <div className="  flex-1 flex flex-col  justify-center items-center">
-        <p className="font-semibold text-[#3E6AA2] text-center">{header}</p>
+        <p className="font-semibold italic text-[#3E6AA2] text-center">
+          {header}
+        </p>
         {subText && (
-          <p className="text-[#3E6AA2] font-bold text-center">{subText}</p>
+          <p className="text-[#3E6AA2] font-bold text-center italic">
+            {subText}
+          </p>
         )}
       </div>
     </div>

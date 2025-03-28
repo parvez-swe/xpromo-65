@@ -40,7 +40,7 @@ const PForm = () => {
                     <div className=" flex flex-col justify-center">
                       <label
                         htmlFor="project-for"
-                        className="block font-medium text-[#3E6AA2]"
+                        className="block font-bold text-[#3E6AA2]"
                       >
                         What&apos;s it FOR?
                       </label>
@@ -71,7 +71,7 @@ const PForm = () => {
                     <div className=" flex flex-col justify-center">
                       <label
                         htmlFor="project-for"
-                        className="block font-medium text-[#3E6AA2]"
+                        className="block font-bold text-[#3E6AA2]"
                       >
                         What&apos;s your budget?
                       </label>
@@ -99,7 +99,7 @@ const PForm = () => {
                   {/* div 3 */}
                   <div className=" grid   grid-cols-2">
                     <div className=" flex flex-col justify-center">
-                      <label className="block font-medium text-[#3E6AA2]">
+                      <label className="block font-bold text-[#3E6AA2]">
                         What&apos;s the quantity needed?
                       </label>
                     </div>
@@ -160,30 +160,26 @@ const PForm = () => {
                   {/* div 4 */}
                   <div className=" grid grid-cols-2 ">
                     <div className=" flex flex-col justify-center">
-                      <label className="text-[#3E6AA2] ">
+                      <label className="text-[#3E6AA2]  font-bold">
                         What&apos;s your target date?
                       </label>
                     </div>
 
                     <div className="flex items-center space-x-4 mt-2">
-                      {!nodeadline && (
-                        <div>
-                          <CustomDatePicker date={date} setDate={setDate} />
-                        </div>
-                      )}
                       {!date && (
                         <label className="flex items-center space-x-2">
                           <button
                             onClick={() => setNoDeadline(true)}
-                            className={`px-4 italic  text-[10px] h-6   rounded-full  border-2 border-newprimary focus:ring-2   focus: ring-newprimary focus: ${
-                              nodeadline
-                                ? "bg-newprimary text-white"
-                                : "text-newprimary"
-                            } focus: text-white  `}
+                            className={`px-4 italic  text-[10px] h-6   rounded-full  border-2 border-newprimary focus:ring-2  ring-newprimary  bg-newprimary  text-white  `}
                           >
                             No Deadline
                           </button>
                         </label>
+                      )}
+                      {!nodeadline && (
+                        <div>
+                          <CustomDatePicker date={date} setDate={setDate} />
+                        </div>
                       )}
                     </div>
                   </div>
@@ -222,7 +218,7 @@ const PForm = () => {
                   <div className="   pb-5">
                     {/* <label className="block font-medium"></label> */}
                     <textarea
-                      className="mt-2 w-full border rounded-full italic font-bold  text-xs h-12 px-5 pt-3 shadow-sm focus:ring-newprimary focus:newprimary placeholder:text-[#989AA0]"
+                      className="mt-2 w-full border rounded-full italic   text-xs h-12 px-5 pt-3 shadow-sm focus:ring-newprimary focus:newprimary placeholder:text-[#989AA0]"
                       //   rows="4"
                       placeholder="SPECIAL INSTRUCTIONS "
                     ></textarea>
@@ -254,7 +250,10 @@ const PForm = () => {
                   <div className=" space-y-6">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="flex flex-col">
-                        <label className="text-[#4573A9]" htmlFor="Name">
+                        <label
+                          className="text-[#4573A9] font-bold"
+                          htmlFor="Name"
+                        >
                           Name
                         </label>
                         <input
@@ -264,7 +263,10 @@ const PForm = () => {
                         />
                       </div>
                       <div className="flex flex-col">
-                        <label className="text-[#4573A9]" htmlFor="company">
+                        <label
+                          className="text-[#4573A9] font-bold"
+                          htmlFor="company"
+                        >
                           Company
                         </label>
                         <input
@@ -274,7 +276,10 @@ const PForm = () => {
                         />
                       </div>
                       <div className="flex flex-col">
-                        <label className="text-[#4573A9]" htmlFor="phone">
+                        <label
+                          className="text-[#4573A9] font-bold"
+                          htmlFor="phone"
+                        >
                           Phone Number
                         </label>
                         <input
@@ -284,7 +289,10 @@ const PForm = () => {
                         />
                       </div>
                       <div className="flex flex-col">
-                        <label className="text-[#4573A9]" htmlFor="email">
+                        <label
+                          className="text-[#4573A9] font-bold"
+                          htmlFor="email"
+                        >
                           Business Email
                         </label>
                         <input

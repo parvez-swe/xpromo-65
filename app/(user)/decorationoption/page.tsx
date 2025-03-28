@@ -1,10 +1,9 @@
 import { BreadCrumbCustom } from "@/components/BreadCrumpCustom";
-import { Check, X } from "lucide-react";
 import Image from "next/image";
-export default function AboutUs() {
+export default function DecorationOptionPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <section className="py-12 md:py-16 lg:py-20  max-w-7xl mx-auto">
+    <div className=" max-w-7xl mx-auto  min-h-screen 0">
+      <section className="py-20  w-full   ">
         <BreadCrumbCustom
           currentPage={"DECORATION OPTIONS"}
           previousPages={[{ name: "HOME", url: "/" }]}
@@ -31,7 +30,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Cost-effective for bulk orders</p>
@@ -41,7 +40,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Vibrant, long-lasting prints</p>
@@ -51,7 +50,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Works well on fabric and hard surfaces</p>
@@ -101,7 +100,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Full-color, high-resolution prints</p>
@@ -111,7 +110,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>No setup cost for multiple colors</p>
@@ -121,7 +120,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Great for complex designs and photographs</p>
@@ -131,7 +130,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Works best on 100% cotton fabric (for DTG)</p>
@@ -168,7 +167,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Premium, high-end look</p>
@@ -178,7 +177,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Extremely durable and long-lasting</p>
@@ -188,7 +187,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Great for logos and simple designs</p>
@@ -237,7 +236,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Great for small, detailed designs</p>
@@ -247,7 +246,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Works for vibrant colors and gradients</p>
@@ -257,7 +256,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Suitable well for short-run or custom orders</p>
@@ -307,7 +306,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Extremely durable (doesn&apos;t fade, crack, or peel)</p>
@@ -317,7 +316,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>High-quality, vibrant colors</p>
@@ -327,7 +326,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Ideal for full-color prints and photographic images</p>
@@ -374,7 +373,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Works on curved and uneven surfaces</p>
@@ -384,7 +383,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Can print fine details and small text</p>
@@ -394,7 +393,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Great for plastic, metal, and glass products</p>
@@ -441,7 +440,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Elegant, sophisticated look</p>
@@ -451,7 +450,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Long-lasting and subtle branding</p>
@@ -461,7 +460,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>No ink or color limitations</p>
@@ -512,7 +511,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Permanent, high-end finish</p>
@@ -522,7 +521,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Precise and highly detailed</p>
@@ -532,7 +531,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Works well on a wide range of materials</p>
@@ -582,7 +581,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Full-color, photo-quality prints</p>
@@ -592,7 +591,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Scratch-resistant and long-lasting</p>
@@ -602,7 +601,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Works on virtually any hard surface</p>
@@ -650,7 +649,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Luxurious, high-end appearance</p>
@@ -660,7 +659,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Durable and resistant to fading</p>
@@ -670,7 +669,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Works well on paper, leather, and packaging</p>
@@ -720,7 +719,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Can cover entire surfaces, including curved areas</p>
@@ -730,7 +729,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>
@@ -742,7 +741,7 @@ export default function AboutUs() {
                   src={"/check.png"}
                   height={100}
                   width={100}
-                  className="h-4 w-4 mr-2"
+                  className="h-3 w-auto mr-2"
                   alt="check"
                 />
                 <p>Highly durable results</p>
