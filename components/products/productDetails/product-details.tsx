@@ -3,6 +3,9 @@
 import { Textarea } from "@/components/ui/textarea";
 import { ProductCarousel } from "./product-carousel";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/slices/cartSlice";
+import { xpromoProducts } from "@/data/products";
 
 const productImages = [
   "/images/tshirt.jpg",
@@ -20,6 +23,57 @@ const productImages = [
 export function ProductDetails() {
   const [productCount, setProductCount] = useState(50);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+
+  const dispatch = useDispatch();
+  const {
+    id,
+    sku,
+    name,
+
+    description,
+    price,
+    discountedPrice,
+    stock,
+    rating,
+    images,
+    variants,
+    category,
+    factoryDirect,
+    specifications,
+    shipping,
+    newArrival,
+    ecoProduct,
+    industry,
+    range,
+    twentyFourHour,
+    twentyFourLocation,
+  } = xpromoProducts[0];
+  const handleAddToCart = () => {
+    const productData = {
+      id,
+      sku,
+      name,
+      description,
+      price,
+      discountedPrice,
+      stock,
+      rating,
+      images,
+      variants,
+      category,
+      factoryDirect,
+      specifications,
+      shipping,
+      newArrival,
+      ecoProduct,
+      industry,
+      range,
+      twentyFourHour,
+      twentyFourLocation,
+      quantity: productCount,
+    };
+    dispatch(addToCart(productData));
+  };
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8 md:space-y-0 md:grid md:grid-cols-2 md:gap-8">
@@ -130,7 +184,10 @@ export function ProductDetails() {
 
           {/* Add to Quote Button */}
           <div className=" flex flex-col items-center justify-center">
-            <button className=" px-5 text-xs font-bold   py-2 rounded-full border-black border-2 ">
+            <button
+              onClick={handleAddToCart}
+              className=" px-5 text-xs font-bold   py-2 rounded-full border-black border-2 "
+            >
               ADD TO QUOTE
             </button>
           </div>

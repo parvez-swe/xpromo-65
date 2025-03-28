@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { ShoppingCart } from "lucide-react";
+// import { ShoppingCart } from "lucide-react";
 import { Card } from "./ui/card";
 import Image from "next/image";
 import { ScrollArea } from "./ui/scroll-area";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import {
+  decreaseQty,
+  increaseQty,
   // decreaseQty,
   // increaseQty,
   removeFromCart,
@@ -34,7 +36,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
 
   // console.log(cartItems);
   const [peopleCount, setPeopleCount] = useState(50);
-
+  // console.log(cartItems?.quantity as number);
   return (
     <>
       {/* Trigger Button */}
@@ -122,43 +124,25 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                       <h2 className="text-lg font-bold ">{citem.name}</h2>
                       <div className="flex items-center gap-4">
                         <span className="font-bold">QTY</span>
-                        {/* Quantity */}
-                        {/* <div className="flex items-center mt-2 space-x-4  border border-newprimary rounded-full w-fit">
-                          <button
-                            type="button"
-                            onClick={() => dispatch(decreaseQty(citem.id))}
-                            className="px-3  text-3xl rounded-md"
-                          >
-                            -
-                          </button>
-                          <span className="text-lg italic font-semibold">
-                            {citem.quantity}
-                          </span>
-                          <button
-                            type="button"
-                            onClick={() => dispatch(increaseQty(citem.id))}
-                            className="px-3  text-3xl rounded-md"
-                          >
-                            +
-                          </button>
-                        </div> */}
+
                         <div className="flex flex-row items-center justify-center">
                           <div className="flex-1 flex items-center justify-center">
                             <div className="flex items-center mt-2 space-x-4 border-2 border-newprimary ml-10 rounded-full">
                               <button
                                 type="button"
-                                onClick={() =>
-                                  setPeopleCount((prev) =>
-                                    Math.max(0, prev - 1)
-                                  )
-                                }
+                                onClick={() => dispatch(decreaseQty(citem.id))}
+                                // onClick={() =>
+                                //   setPeopleCount((prev) =>
+                                //     Math.max(0, prev - 1)
+                                //   )
+                                // }
                                 className="px-3 text-3xl rounded-md"
                               >
                                 -
                               </button>
                               <input
                                 type="number"
-                                value={peopleCount}
+                                value={citem.quantity}
                                 onChange={(e) =>
                                   setPeopleCount(
                                     Math.max(0, parseInt(e.target.value) || 0)
@@ -182,9 +166,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                               </style>
                               <button
                                 type="button"
-                                onClick={() =>
-                                  setPeopleCount((prev) => prev + 1)
-                                }
+                                onClick={() => dispatch(increaseQty(citem.id))}
                                 className="px-3 text-3xl rounded-md"
                               >
                                 +
