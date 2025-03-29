@@ -12,42 +12,42 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 
-interface Review {
-  id: number;
-  name: string;
-  text: string;
-}
-
-const reviews: Review[] = [
+const reviews = [
   {
-    id: 1,
-    name: "Nabila Sultana",
-    text: "X Promo has everything I need! The products are top-notch, delivery is fast, and the customer support is outstanding. A wonderful online shopping experience",
+    name: "Elissa Martin",
+    rating: "⭐️ ⭐️ ⭐️ ⭐️ ⭐️",
+    review:
+      "I was honestly surprised by how quickly everything came together with Xpromo—from order to delivery, the whole process was smooth and fast. The swag looks and feels amazing. Super happy with the experience and will definitely come back for more.",
   },
   {
-    id: 2,
-    name: "Rahim Ahmed",
-    text: "X Promo offers a fantastic selection of high-quality products at unbeatable prices. Quick delivery and excellent customer service. Highly recommended for all shoppers!",
+    name: "Will Dowd",
+    rating: "⭐️ ⭐️ ⭐️ ⭐️ ⭐️",
+    review:
+      "What stood out to me most with Xpromo was the quality. The pricing is also really fair for what you get, especially considering how solid and well-made everything is. Great value, great service. ELITE!",
   },
   {
-    id: 3,
-    name: "Sara Khan",
-    text: "Shopping at X Promo is so easy! Their website is user-friendly, and the amazing deals keep me coming back for stylish and affordable finds. Highly recommended!",
+    name: "Carolyn Yvellez",
+    rating: "⭐️ ⭐️ ⭐️ ⭐️ ⭐️",
+    review:
+      "I try to shop consciously, so I was really impressed to see how committed Xpromo is to sustainability. The materials, the packaging, even their production process—everything felt intentional and eco-friendly. And on top of that, the product is beautiful and really well done.",
   },
   {
-    id: 4,
-    name: "Nabila Islam",
-    text: "X Promo has everything I need! The products are top-notch, delivery is fast, and the customer support is outstanding. A wonderful online shopping experience",
+    name: "Ryan Mitchell",
+    rating: "⭐️ ⭐️ ⭐️ ⭐️ ⭐️",
+    review:
+      "Honestly just a seamless experience from Xpromo. Customer service was responsive and helpful, my branded merch arrived quickly, and the final result exceeded my expectations. It’s refreshing to find a business that actually delivers on both speed and quality.",
   },
   {
-    id: 5,
-    name: "Rahim Mohammad",
-    text: "X Promo offers a fantastic selection of high-quality products at unbeatable prices. Quick delivery and excellent customer service. Highly recommended for all shoppers!",
+    name: "Jessica Langford",
+    rating: "⭐️ ⭐️ ⭐️ ⭐️ ⭐️",
+    review:
+      "Absolutely thrilled with our swag from Xpromo. It arrived much sooner than I anticipated, and it was clear from the get-go that quality wasn’t sacrificed for speed. It also felt great knowing that sustainability is part of their ethos—makes supporting them even more worthwhile.",
   },
   {
-    id: 6,
-    name: "Sara Mike",
-    text: "Shopping at X Promo is so easy! Their website is user-friendly, and the amazing deals keep me coming back for stylish and affordable finds. Highly recommended!",
+    name: "Nathan Reid",
+    rating: "⭐️ ⭐️ ⭐️ ⭐️ ⭐️",
+    review:
+      "I couldn’t be happier with the products we received from Xpromo. The price was surprisingly affordable for merch that feels this high-end. Definitely a return customer in the making.",
   },
 ];
 
@@ -97,7 +97,7 @@ export default function CustomerReviews() {
             className="w-full"
           >
             {reviews.map((review) => (
-              <SwiperSlide key={review.id} className="h-auto pb-12">
+              <SwiperSlide key={review.name} className="h-auto pb-12">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -111,15 +111,15 @@ export default function CustomerReviews() {
                       </span>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-center space-y-4">
+                    <div className="flex-1 flex flex-col  items-center space-y-4">
                       <div className="text-center">
                         <h3 className="text-xl font-semibold">{review.name}</h3>
-                        <p className="text-muted-foreground text-sm">
-                          Customer
+                        <p className="text-muted-foreground text-2xl  ">
+                          {review.rating}
                         </p>
                       </div>
                       <p className="text-gray-800 leading-relaxed text-center">
-                        {review.text}
+                        {review.review}
                       </p>
                     </div>
                   </Card>

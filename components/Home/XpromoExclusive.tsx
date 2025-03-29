@@ -20,16 +20,16 @@ export default function Home() {
             <h1 className="text-4xl font-semibold mb-8">
               CREATE YOUR PERFECT JACKET
             </h1>
-            <p className=" text- font-thin">
+            <p className=" text-lg font-thin">
               Choose colours, designs, and logos <br /> to make it uniquely
               yours.
             </p>
 
             <div className=" mt-10 flex flex-row items-center">
-              <button className="mr-10 font-bold text-sm  border-2    border-newprimary  px-5 py-2 rounded-full">
+              <button className="mr-10 font-bold text-2xl  border-2    border-newprimary hover:bg-newprimary hover:text-white  px-5 py-2 rounded-full">
                 START DESIGNING
               </button>
-              <button className=" ml-10 border-2 font-bold text-sm  border-newprimary  px-5 py-2 rounded-full">
+              <button className=" ml-10 border-2 font-bold text-2xl  border-newprimary  px-5 py-2 rounded-full hover:bg-newprimary  hover:text-white">
                 BROWSE OUR RANGE
               </button>
             </div>

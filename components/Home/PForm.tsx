@@ -8,12 +8,18 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { CustomDatePicker } from "../CustomDatePicker";
+import Image from "next/image";
 const PForm = () => {
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [nodeadline, setNoDeadline] = useState(false);
 
   // Dynamically import Lottie with SSR disabled
   const [peopleCount, setPeopleCount] = useState(50);
+
+  const resetDeadline = () => {
+    setDate(undefined);
+    setNoDeadline(false);
+  };
   return (
     <div>
       <div className=" w-full">
@@ -42,7 +48,7 @@ const PForm = () => {
                         htmlFor="project-for"
                         className="block font-bold text-[#3E6AA2]"
                       >
-                        What&apos;s it FOR?
+                        What&apos;s FOR?
                       </label>
                     </div>
 
@@ -53,8 +59,12 @@ const PForm = () => {
                    focus:ring-newprimary focus:border-newprimary appearance-none pl-3 pr-10"
                       >
                         <option></option>
-                        <option>Option 1</option>
-                        <option>Option 2</option>
+                        <option>Onboarding</option>
+                        <option>Employee Gift</option>
+                        <option>Office Merch</option>
+                        <option>Event</option>
+                        <option>Customers Gift</option>
+                        <option>Other</option>
                       </select>
                       {/* Custom Chevron Icon */}
                       <ChevronDownIcon className="absolute top-1/2 right-3 w-5 h-5 text-gray-500 transform -translate-y-1/2 pointer-events-none" />
@@ -83,8 +93,11 @@ const PForm = () => {
                    focus:ring-newprimary focus:border-newprimary appearance-none pl-3 pr-10"
                       >
                         <option></option>
-                        <option>100</option>
-                        <option>2000</option>
+                        <option>$0 - $1,000</option>
+                        <option>$1,000 - $5,000</option>
+
+                        <option>$10,000 - $50,000</option>
+                        <option>$50,000+</option>
                       </select>
                       {/* Custom Chevron Icon */}
                       <ChevronDownIcon className="absolute top-1/2 right-3 w-5 h-5 text-newprimary transform -translate-y-1/2 pointer-events-none" />
@@ -180,6 +193,29 @@ const PForm = () => {
                         <div>
                           <CustomDatePicker date={date} setDate={setDate} />
                         </div>
+                      )}
+
+                      {nodeadline === true && (
+                        <button className="" onClick={resetDeadline}>
+                          <Image
+                            className="h-4 w-auto"
+                            src={"/cross.png"}
+                            alt="cross"
+                            height={100}
+                            width={100}
+                          />
+                        </button>
+                      )}
+                      {date !== undefined && (
+                        <button className="" onClick={resetDeadline}>
+                          <Image
+                            className="h-4 w-auto"
+                            src={"/cross.png"}
+                            alt="cross"
+                            height={100}
+                            width={100}
+                          />
+                        </button>
                       )}
                     </div>
                   </div>
@@ -310,7 +346,7 @@ const PForm = () => {
         </>
 
         <div className="mt-8 text-center flex flex-col items-center">
-          <button className=" text-sm text-white font-bold bg-newprimary px-10 py-2  rounded-full uppercase">
+          <button className=" text-2xl text-newprimary border-2 border-newprimary  hover:text-white font-bold hover:bg-newprimary px-20 py-2  rounded-full uppercase">
             Submit
           </button>
           {/* <p className="mt-4 text-start text-sm text-newprimary w-[50%]">

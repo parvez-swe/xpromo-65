@@ -105,9 +105,9 @@ export default function PopularCategories() {
                     </h3>
                     <div className="flex justify-center">
                       <Link href={`/categories/${category.title}`}>
-                        <Button className="rounded-full px-5 bg-newprimary hover:bg-newprimary/90 text-white">
-                          Xplore
-                        </Button>
+                        <button className="rounded-full px-12 uppercase text-base font-bold text-newprimary  hover:text-white border-2 border-newprimary hover:bg-newprimary flex flex-row items-center ">
+                          <span className=" text-2xl ">X</span>plore
+                        </button>
                       </Link>
                     </div>
                   </div>

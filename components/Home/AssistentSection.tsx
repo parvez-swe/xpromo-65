@@ -53,14 +53,16 @@ export default function AssistanceSteps() {
                 <div className="relative min-h-64 mb-6">
                   <Lottie animationData={step.image} loop={true} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-newprimary">{step.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-newprimary">
+                  {step.title}
+                </h3>
                 <p className="text-newprimary">{step.description}</p>
               </ScrollAnimation>
             ))}
           </div>
           <div className="flex justify-center">
             <Link href="/categories">
-              <button className=" text-sm text-white uppercase font-bold bg-newprimary px-10 py-2  rounded-full">
+              <button className=" text-xl text-newprimary border-2 border-newprimary hover:text-white uppercase font-bold hover:bg-newprimary px-10 py-2  rounded-full">
                 Get Started
               </button>
             </Link>

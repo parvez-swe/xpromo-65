@@ -132,7 +132,7 @@ export default function Home() {
           previousPages={[{ name: "HOME", url: "/" }]}
         />
       </div>
-      <h1 className="text-3xl md:text-4xl font-bold text-end mr-20 mb-8">
+      <h1 className="text-3xl md:text-4xl font-bold text-center mr-20 mb-8">
         PMS COLOUR CHART
       </h1>
 
@@ -157,12 +157,12 @@ export default function Home() {
         </div>
         <div className="w-[60%] border-t-2 border-newprimary my-6"></div>
 
-        <p className="text-sm md:text-sm text-newprimary px-16">
+        <p className="text-base text-newprimary px-16">
           Use this guide to assist your colour selection and specification
           process.
         </p>
 
-        <p className="text-sm md:text-sm text-newprimary max-w-3xls mb-5 px-16">
+        <p className="text-base text-newprimary max-w-3xls mb-5 px-16">
           This chart is a reference guide only. Pantone® colours on computer
           screens may vary based on the graphics card and monitor used in your
           system. For true accuracy use the Pantone® Colour Publication.

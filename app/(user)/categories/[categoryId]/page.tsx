@@ -136,12 +136,14 @@ export default function ProductsPage() {
           <main className="md:col-span-3">
             {filteredProducts.length === 0 ? (
               <div className="text-center py-12">
-                <h3 className="text-lg font-medium">No products found</h3>
+                <h3 className="text-lg  text-newprimary font-bold">
+                  No products found
+                </h3>
                 <p className="text-muted-foreground mt-2">
                   Try adjusting your filters
                 </p>
                 <button
-                  className=" border-newprimary border rounded-full px-5 py-1 mt-2 hover:bg-newprimary hover:text-white "
+                  className=" border-newprimary font-bold border rounded-full px-5 py-1 mt-2 hover:bg-newprimary hover:text-white "
                   onClick={() => {
                     setSelectedStyle(undefined);
                     setSelectedRange(undefined);

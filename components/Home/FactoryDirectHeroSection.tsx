@@ -23,7 +23,7 @@ const FactoryDirectHeroSection = () => {
           <div className=" flex ice justify-center py-5 mt-10">
             <Link
               href="categories/cagegoryid"
-              className=" bg-newprimary font-bold text-white rounded-3xl px-16 py-2"
+              className=" hover:bg-newprimary border-2  border-newprimary text-newprimary  hover:border-2  font-bold text-xl  hover:text-white  rounded-3xl px-14 py-2"
             >
               GET STARTED
             </Link>

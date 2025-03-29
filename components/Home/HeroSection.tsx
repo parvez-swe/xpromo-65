@@ -20,9 +20,9 @@ export default function HeroSection() {
   return (
     <div className="pt-10">
       {isFactoryDirect ? (
-        <FactoryDirectHeroSection />
-      ) : (
         <LocalStockHeroSection />
+      ) : (
+        <FactoryDirectHeroSection />
       )}
     </div>
   );

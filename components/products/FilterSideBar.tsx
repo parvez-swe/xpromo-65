@@ -32,9 +32,11 @@ export function FilterSidebar({
                           : ""
                       }`}
                       // onClick={() => onCategorySelect(subcat.categoryName)}
-                      onMouseOver={() => onCategorySelect(subcat.categoryName)}
                     >
                       <Image
+                        onMouseOver={() =>
+                          onCategorySelect(subcat.categoryName)
+                        }
                         src={subcat.imageUrl}
                         height={30}
                         width={30}

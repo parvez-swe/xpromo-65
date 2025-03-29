@@ -55,6 +55,17 @@ export function Navbar() {
 
   const category = isFactoryDirect ? WithfactoryDirect : withoutFactoryDirect;
 
+  // scroll;
+  const scrollToElement = (e: any) => {
+    e.preventDefault();
+    const target = document.querySelector("#lvf");
+    if (target) {
+      const offset = 130; // Adjust according to your navbar height
+      const y = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="fixed top-0 z-40 w-[100%] bg-white">
       {/* <div className="flex justify-between items-center px-4 h-20 "> */}
@@ -112,7 +123,7 @@ export function Navbar() {
                 </div>
               </div>
               <div className="ml-2 transition-opacity duration-300">
-                <Link href="#lvsf" className="">
+                <Link href="#lvf" onClick={scrollToElement} className="">
                   <Image
                     src="/nav/interrogation.svg"
                     width={20}
@@ -262,34 +273,79 @@ export function Navbar() {
                             </div>
                           </div>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent className="w-64 text-xs">
+                        <DropdownMenuContent className=" w-72 rounded-xl">
                           <DropdownMenuGroup>
-                            <div className=" grid grid-cols-2 gap-5 py-5 ">
-                              {nav?.subcategories?.map((industry: any) => (
-                                <DropdownMenuItem
-                                  key={industry.imageUrl}
-                                  className=" hover:bg-transparent focus:bg-transparent"
-                                >
+                            {nav.subcategories.map((subsubcat: any, i: any) => (
+                              <React.Fragment key={i}>
+                                {subsubcat.subcategories.length <= 0 ? (
                                   <Link
-                                    href={`/categories/${industry.categoryName
+                                    href={`/categories/${subsubcat.categoryName
                                       .replace(/\s+/g, "-")
                                       .toLowerCase()}`}
-                                    className="w-full flex items-center justify-center"
+                                    className=" w-full  flexitems-centerjustify-center"
                                   >
-                                    {industry.imageUrl && (
-                                      <Image
-                                        priority
-                                        src={industry.imageUrl}
-                                        alt={industry.categoryName}
-                                        width={200}
-                                        height={200}
-                                        className="h-12 w-autho  object-contain"
-                                      />
-                                    )}
+                                    <DropdownMenuItem className=" w-full flexitems-centerustify-center rounded-full focus:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent group">
+                                      {subsubcat.imageUrl && (
+                                        <div className="p-2 rounded-full border border-newprimary group-hover:bg-newprimary group-data-[state=open]:bg-newprimary">
+                                          <Image
+                                            src={subsubcat.imageUrl}
+                                            alt="image"
+                                            width={20}
+                                            height={20}
+                                            className="h-3 w-3 transition-all duration-300 group-hover:invert group-hover:brightness-0 group-data-[state=open]:invert group-data-[state=open]:brightness-0"
+                                          />
+                                        </div>
+                                      )}
+                                      <p className="text-base font-bold">
+                                        {subsubcat.categoryName}
+                                      </p>
+                                    </DropdownMenuItem>
                                   </Link>
-                                </DropdownMenuItem>
-                              ))}
-                            </div>
+                                ) : (
+                                  <DropdownMenuSub>
+                                    <DropdownMenuSubTrigger className="hover:bg-[#B2B8BE] pl-5 focus:bg-[#B2B8BE] rounded-full hover:border-newprimary border-2 border-transparent group relative flex items-center gap-2">
+                                      {subsubcat.imageUrl && (
+                                        <div className="p-2 rounded-full border border-newprimary group-hover:bg-newprimary group-data-[state=open]:bg-newprimary">
+                                          <Image
+                                            src={subsubcat.imageUrl}
+                                            alt="image"
+                                            width={20}
+                                            height={20}
+                                            className="h-3 w-3 transition-all duration-300 group-hover:invert group-hover:brightness-0 group-data-[state=open]:invert group-data-[state=open]:brightness-0"
+                                          />
+                                        </div>
+                                      )}
+                                      <div className="flex flex-1 items-center gap-1 justify-between">
+                                        <p className="text-xs font-bold">
+                                          {subsubcat.categoryName}
+                                        </p>
+                                        <ChevronRight className="h-4 w-4  text-newprimary opacity-0 group-hover:opacity-100 transition-opacity duration-200    group-data-[state=open]:opacity-100" />
+                                      </div>
+                                    </DropdownMenuSubTrigger>
+                                    <DropdownMenuPortal>
+                                      <DropdownMenuSubContent className=" rounded-xl">
+                                        {subsubcat.subcategories.map(
+                                          (subsubsubcat: any, j: any) => (
+                                            <Link
+                                              key={j}
+                                              href={`/categories/${subsubsubcat.categoryName
+                                                .replace(/\s+/g, "-")
+                                                .toLowerCase()}`}
+                                              className=" font-bold"
+                                            >
+                                              {" "}
+                                              <DropdownMenuItem className="text-[10px] px-3 mx-3 hover:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent rounded-full">
+                                                {subsubsubcat.categoryName}
+                                              </DropdownMenuItem>{" "}
+                                            </Link>
+                                          )
+                                        )}
+                                      </DropdownMenuSubContent>
+                                    </DropdownMenuPortal>
+                                  </DropdownMenuSub>
+                                )}
+                              </React.Fragment>
+                            ))}
                           </DropdownMenuGroup>
                         </DropdownMenuContent>
                       </DropdownMenu>
@@ -381,7 +437,7 @@ export function Navbar() {
                                         </div>
                                       )}
                                       <div className="flex flex-1 items-center gap-1 justify-between">
-                                        <p className="text-xs font-bold">
+                                        <p className="text-base font-bold">
                                           {subsubcat.categoryName}
                                         </p>
                                         <ChevronRight className="h-4 w-4  text-newprimary opacity-0 group-hover:opacity-100 transition-opacity duration-200    group-data-[state=open]:opacity-100" />
@@ -399,7 +455,7 @@ export function Navbar() {
                                               className=" font-bold"
                                             >
                                               {" "}
-                                              <DropdownMenuItem className="text-[10px] px-3 mx-3 hover:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent rounded-full">
+                                              <DropdownMenuItem className="text-sm px-3 mx-3 hover:bg-[#B2B8BE] hover:border-newprimary border-2 border-transparent rounded-full">
                                                 {subsubsubcat.categoryName}
                                               </DropdownMenuItem>{" "}
                                             </Link>

@@ -24,8 +24,12 @@ export default function ProjectForm() {
             <p className="mb-3 text-sm">fast, simple, and stress-free.</p>
 
             <div className="flex ice justify-center ">
-              <div className=" w-[90%] min-h-[300px]">
-                <Lottie animationData={factoryDirectAnimation} loop={true} />
+              <div className="">
+                <Lottie
+                  className=" h-[450px] w-auto"
+                  animationData={factoryDirectAnimation}
+                  loop={true}
+                />
               </div>
             </div>
           </div>

@@ -259,7 +259,7 @@ export const WithfactoryDirect = [
         ],
       },
       {
-        categoryName: "Electronics & Tech Products",
+        categoryName: "Electronics",
         imageUrl: "/image/Shop-by-category/computer-speaker.svg",
         subcategories: [
           {
@@ -351,7 +351,7 @@ export const WithfactoryDirect = [
         ],
       },
       {
-        categoryName: "Custom Packaging Items",
+        categoryName: "Custom Packaging",
         imageUrl: "/image/Shop-by-category/box-open.svg",
         subcategories: [
           {
@@ -513,7 +513,7 @@ export const WithfactoryDirect = [
         ],
       },
       {
-        categoryName: "Jewellery & Accessories",
+        categoryName: "Accessories",
         imageUrl: "/image/Shop-by-category/gem.svg",
         subcategories: [
           {
@@ -1050,7 +1050,7 @@ export const withoutFactoryDirect = [
         ],
       },
       {
-        categoryName: "Electronics & Tech Products",
+        categoryName: "Electronics",
         imageUrl: "/image/Shop-by-category/computer-speaker.svg",
         subcategories: [
           {
@@ -1142,7 +1142,7 @@ export const withoutFactoryDirect = [
         ],
       },
       {
-        categoryName: "Custom Packaging Items",
+        categoryName: "Custom Packaging",
         imageUrl: "/image/Shop-by-category/box-open.svg",
         subcategories: [
           {
@@ -1304,7 +1304,7 @@ export const withoutFactoryDirect = [
         ],
       },
       {
-        categoryName: "Jewellery & Accessories",
+        categoryName: "Accessories",
         imageUrl: "/image/Shop-by-category/gem.svg",
         subcategories: [
           {
@@ -1632,39 +1632,39 @@ export const withoutFactoryDirect = [
       },
     ],
   },
-  {
-    categoryName: "Our Brands",
-    imageUrl: "/image/Our-Brands.svg",
-    subcategories: [
-      {
-        categoryName: "All Brand Logos",
-        imageUrl: "",
-        subcategories: [],
-      },
-    ],
-    ourBrands: [
-      { icon: "/image/OurBrands/Adidas-1.png", title: "Adidas" },
-      { icon: "/image/OurBrands/ascolour.png", title: "Ascolour" },
+  // {
+  //   categoryName: "Our Brands",
+  //   imageUrl: "/image/Our-Brands.svg",
+  //   subcategories: [
+  //     {
+  //       categoryName: "All Brand Logos",
+  //       imageUrl: "",
+  //       subcategories: [],
+  //     },
+  //   ],
+  //   ourBrands: [
+  //     { icon: "/image/OurBrands/Adidas-1.png", title: "Adidas" },
+  //     { icon: "/image/OurBrands/ascolour.png", title: "Ascolour" },
 
-      { icon: "/image/OurBrands/Bellroy-1.png", title: "Bellroy" },
-      { icon: "/image/OurBrands/Blunt-1.png", title: "Blunt" },
-      { icon: "/image/OurBrands/Callaway-1.png", title: "Callaway" },
-      { icon: "/image/OurBrands/Camelbak-1.png", title: "Camelbak" },
-      { icon: "/image/OurBrands/Flexfit-1.png", title: "Flexfit" },
-      { icon: "/image/OurBrands/Footjoy-1.png", title: "Footjoy" },
-      { icon: "/image/OurBrands/HellyHansen-1.png", title: "Helly Hansen" },
-      { icon: "/image/OurBrands/hexa.png", title: "hexa" },
-      { icon: "/image/OurBrands/Moleskine-1.png", title: "Moleskine" },
-      { icon: "/image/OurBrands/Nike-1.png", title: "Nike" },
-      { icon: "/image/OurBrands/Thule-1.png", title: "Thule" },
-      { icon: "/image/OurBrands/Titleist-1.png", title: "Titleist" },
-      { icon: "/image/OurBrands/swisspeak.png", title: "swisspeak" },
+  //     { icon: "/image/OurBrands/Bellroy-1.png", title: "Bellroy" },
+  //     { icon: "/image/OurBrands/Blunt-1.png", title: "Blunt" },
+  //     { icon: "/image/OurBrands/Callaway-1.png", title: "Callaway" },
+  //     { icon: "/image/OurBrands/Camelbak-1.png", title: "Camelbak" },
+  //     { icon: "/image/OurBrands/Flexfit-1.png", title: "Flexfit" },
+  //     { icon: "/image/OurBrands/Footjoy-1.png", title: "Footjoy" },
+  //     { icon: "/image/OurBrands/HellyHansen-1.png", title: "Helly Hansen" },
+  //     { icon: "/image/OurBrands/hexa.png", title: "hexa" },
+  //     { icon: "/image/OurBrands/Moleskine-1.png", title: "Moleskine" },
+  //     { icon: "/image/OurBrands/Nike-1.png", title: "Nike" },
+  //     { icon: "/image/OurBrands/Thule-1.png", title: "Thule" },
+  //     { icon: "/image/OurBrands/Titleist-1.png", title: "Titleist" },
+  //     { icon: "/image/OurBrands/swisspeak.png", title: "swisspeak" },
 
-      // { icon: "/image/OurBrands/Bic-1.png", title: "Bic" },
-      // { icon: "/image/OurBrands/Coleman-1.png", title: "Coleman" },
-      { icon: "/image/OurBrands/UnderArmour-1.png", title: "Under Armour" },
-    ],
-  },
+  //     // { icon: "/image/OurBrands/Bic-1.png", title: "Bic" },
+  //     // { icon: "/image/OurBrands/Coleman-1.png", title: "Coleman" },
+  //     { icon: "/image/OurBrands/UnderArmour-1.png", title: "Under Armour" },
+  //   ],
+  // },
 ];
 
 export const products = [
@@ -2387,7 +2387,7 @@ export const categories = [
     subcategories: [],
   },
   {
-    categoryName: "Electronics & Tech Products",
+    categoryName: "Electronics",
     imageUrl: "/image/Shop-by-category/computer-speaker.svg",
     subcategories: [],
   },
@@ -2397,7 +2397,7 @@ export const categories = [
     subcategories: [],
   },
   {
-    categoryName: "Custom Packaging Items",
+    categoryName: "Custom Packaging",
     imageUrl: "/image/Shop-by-category/box-open.svg",
     subcategories: [],
   },
@@ -2412,7 +2412,7 @@ export const categories = [
     subcategories: [],
   },
   {
-    categoryName: "Jewellery & Accessories",
+    categoryName: "Accessories",
     imageUrl: "/image/Shop-by-category/gem.svg",
     subcategories: [],
   },

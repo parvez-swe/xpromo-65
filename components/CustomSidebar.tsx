@@ -37,6 +37,11 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
   // console.log(cartItems);
   const [peopleCount, setPeopleCount] = useState(50);
   // console.log(cartItems?.quantity as number);
+
+  const resetDeadline = () => {
+    setDate(undefined);
+    setNoDeadline(false);
+  };
   return (
     <>
       {/* Trigger Button */}
@@ -234,6 +239,29 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                                   setDate={setDate}
                                 />
                               </div>
+                            )}
+
+                            {nodeadline === true && (
+                              <button className="" onClick={resetDeadline}>
+                                <Image
+                                  className="h-4 w-auto"
+                                  src={"/cross.png"}
+                                  alt="cross"
+                                  height={100}
+                                  width={100}
+                                />
+                              </button>
+                            )}
+                            {date !== undefined && (
+                              <button className="" onClick={resetDeadline}>
+                                <Image
+                                  className="h-4 w-auto"
+                                  src={"/cross.png"}
+                                  alt="cross"
+                                  height={100}
+                                  width={100}
+                                />
+                              </button>
                             )}
                           </div>
                         </div>

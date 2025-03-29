@@ -38,7 +38,7 @@ const LogoSlider = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden my-10 max-w-7xl mx-auto">
+    <div className="overflow-hidden my-2 max-w-7xl mx-auto">
       <div
         ref={scrollRef}
         className="flex items-center whitespace-nowrap space-x-4 scrolling-touch"

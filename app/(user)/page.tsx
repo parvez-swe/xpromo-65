@@ -21,7 +21,7 @@ export default function Home() {
       <ProjectForm />
       <AssistanceSteps />
       <PopularProducts />
-      <div id="lvsf"></div>
+
       <LocalVsFactory />
       <ClientReviews />
       {/* <FAQSection /> */}

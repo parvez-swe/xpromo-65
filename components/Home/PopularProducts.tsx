@@ -28,11 +28,11 @@ const relatedProducts = [
     name: "Trucker Cap",
     image: "/placeholder.svg",
   },
-  // {
-  //   id: 5,
-  //   name: "Trucker Cap",
-  //   image: "/placeholder.svg",
-  // },
+  {
+    id: 5,
+    name: "Trucker Cap",
+    image: "/placeholder.svg",
+  },
 ];
 
 export function PopularProducts() {
@@ -42,7 +42,7 @@ export function PopularProducts() {
     <div className="bg-[#004b004c]   rounded-3xl pt-5 flex flex-col items-center">
       <div className=" max-w-[1280px]">
         <h1 className=" text-center text-[#073409] text-xl font-bold mt-10">
-          Better Sourcing, Better Future, Better Swag
+          Better Sourcing, Better Swag, Better Future
         </h1>
         <div className=" grid grid-cols-3 px-10 border-b-2s mx-10  ">
           <div className=" flex flex-col pt-16 ">
@@ -76,7 +76,7 @@ export function PopularProducts() {
                 href={"/categories/eco-products"}
                 className="  w-52 text-xs text-center text-[#073409] font-bold rounded-3xl border-2 border-[#073409] py-3 px-2"
               >
-                Browse Echo Products
+                Browse Eco Products
               </Link>
             </div>
           </div>
@@ -121,6 +121,7 @@ export function PopularProducts() {
         </div>
         {/* <ScrollBar orientation="horizontal" /> */}
         {/* </ScrollArea> */}
+        <div id="z"></div>
       </div>
     </div>
   );

@@ -25,6 +25,11 @@ const relatedProducts = [
     name: "Trucker Cap",
     image: "/placeholder.svg",
   },
+  {
+    id: 5,
+    name: "Trucker Cap",
+    image: "/placeholder.svg",
+  },
 ];
 
 export function RelatedProducts() {
@@ -34,7 +39,7 @@ export function RelatedProducts() {
         RELATED PRODUCTS
       </h2>
       <ScrollArea className="w-full whitespace-nowrap rounded-lg">
-        <div className="flexw-maxspace-x-4 p-4 grid grid-cols-4 gap-3 ">
+        <div className="flexw-maxspace-x-4 p-4 grid grid-cols-5 gap-3 ">
           {relatedProducts.map((product) => (
             <Card
               key={product.id}

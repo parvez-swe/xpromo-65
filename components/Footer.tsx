@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             {/* <h2 className="text-4xl font-bold text-white mb-4">X PROMO</h2> */}
             <Image
-              className=" my-5"
+              className=" my-5 "
               src="/image/xpromo-white.png"
               height={400}
               width={400}
@@ -103,7 +103,7 @@ export default function Footer() {
 
           {/* Factory Direct Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">FACTORY DIRECT STOCK</h3>
+            <h3 className="text-lg font-semibold mb-4">FACTORY DIRECT</h3>
             <ul className="text-white space-y-1 text-xs">
               <li>
                 <a href="#" className="ext-white"></a>
@@ -172,7 +172,7 @@ export default function Footer() {
 
         {/* Contact Information */}
         <div className=" flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flexflex-colmd:flex-rowgap-6 grid grid-cols-1 md:grid-cols-5 items-end  w-full ">
+          <div className=" flex flow-row justify-between mt-5 flexflex-colmd:flex-rowgap-6gridgrid-cols-1md:grid-cols-5items-end  w-full ">
             <div className=" flex flex-col justify-end  ">
               <p className="text-base mb-4 uppercase text-zinc-300">
                 Follow Us
@@ -240,6 +240,7 @@ export default function Footer() {
                 1300 123 456
               </a>
             </div>
+            <div></div>
           </div>
         </div>
       </div>
