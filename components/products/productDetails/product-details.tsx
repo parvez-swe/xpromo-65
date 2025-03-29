@@ -24,6 +24,8 @@ export function ProductDetails() {
   const [productCount, setProductCount] = useState(50);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
+  const [sInstruction, setSInstruction] = useState("");
+
   const dispatch = useDispatch();
   const {
     id,
@@ -71,8 +73,11 @@ export function ProductDetails() {
       twentyFourHour,
       twentyFourLocation,
       quantity: productCount,
+      specialInstruction: sInstruction,
     };
+
     dispatch(addToCart(productData));
+    setSInstruction("");
   };
 
   return (
@@ -177,6 +182,8 @@ export function ProductDetails() {
               Specialty Instructions
             </h2>
             <Textarea
+              value={sInstruction}
+              onChange={(e) => setSInstruction(e.target.value)}
               placeholder="PRINT POSITION, COLOURS, DIFFERENT QUANTITIES AND SIZES ETC."
               className=" italic placeholder:text-xs  min-h-[100px] bg-gray-50 rounded-3xl"
             />

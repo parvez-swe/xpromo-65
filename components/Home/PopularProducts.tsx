@@ -57,7 +57,7 @@ export function PopularProducts() {
             <div className=" flex-1  flex flex-col items-center justify-center">
               <Link
                 href="/sustainabilitypolicy"
-                className=" w-52 text-xs text-[#073409] text-center  font-bold rounded-3xl border-2 border-[#073409] py-3 "
+                className=" w-56 text-sm text-[#073409] text-center  font-bold rounded-3xl border-2 border-[#073409] py-3 "
               >
                 View Suistanability Policy
               </Link>
@@ -74,7 +74,7 @@ export function PopularProducts() {
             <div className=" flex-1  flex flex-col items-center justify-center">
               <Link
                 href={"/categories/eco-products"}
-                className="  w-52 text-xs text-center text-[#073409] font-bold rounded-3xl border-2 border-[#073409] py-3 px-2"
+                className="  w-56 text-sm text-center text-[#073409] font-bold rounded-3xl border-2 border-[#073409] py-3 px-2"
               >
                 Browse Eco Products
               </Link>
@@ -82,7 +82,7 @@ export function PopularProducts() {
           </div>
         </div>
       </div>
-      <div className="w-full px-4 py-6  bg-[#568756] flex flex-col items-center border-t-2 border-white ">
+      <div className="w-full px-4 py-6  bg-[#004b00aa] flex flex-col items-center border-t-2 border-white ">
         <div className=" max-w-[1280px]">
           <h2 className="text-lg text-center text-white  pl-5 font-bold tracking-tight ">
             Popular Sustainable Products

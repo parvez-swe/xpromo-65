@@ -537,7 +537,7 @@ export function Navbar() {
                                           }`}
                                         />
                                       )}
-                                      <p className="text-[10px] font-bold">
+                                      <p className="text-base font-bold">
                                         {subsubcat.categoryName}
                                       </p>
                                     </DropdownMenuItem>
@@ -650,7 +650,7 @@ export function Navbar() {
                                         }`}
                                       />
                                     )}
-                                    <p className="text-[10px] font-bold">
+                                    <p className="text-base font-bold">
                                       {subsubcat.categoryName}
                                     </p>
                                   </DropdownMenuItem>

@@ -10,9 +10,9 @@ import { RootState } from "@/redux/store";
 import {
   decreaseQty,
   increaseQty,
-  // decreaseQty,
-  // increaseQty,
   removeFromCart,
+  updateItemQtyCustom,
+  updateSpecialInstruction,
 } from "@/redux/slices/cartSlice";
 import {
   Accordion,
@@ -34,14 +34,16 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
     setIsOpen(!isOpen);
   };
 
-  // console.log(cartItems);
   const [peopleCount, setPeopleCount] = useState(50);
-  // console.log(cartItems?.quantity as number);
 
   const resetDeadline = () => {
     setDate(undefined);
     setNoDeadline(false);
   };
+  const handleSpecialInstructionChange = (id: string, instruction: string) => {
+    dispatch(updateSpecialInstruction({ id, instruction }));
+  };
+
   return (
     <>
       {/* Trigger Button */}
@@ -78,7 +80,7 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
       {/* Custom Sidebar */}
       <div
         className={`fixed w-[100vw] md:w-[50vw] top-0 right-0 h-[100vh]  border-l-2 border-graytext bg-white shadow-lg z-50 transition-transform transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+          isOpen ? " translate-x-0 " : "translate-x-full"
         }`}
       >
         {/* Sidebar Header */}
@@ -136,11 +138,6 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                               <button
                                 type="button"
                                 onClick={() => dispatch(decreaseQty(citem.id))}
-                                // onClick={() =>
-                                //   setPeopleCount((prev) =>
-                                //     Math.max(0, prev - 1)
-                                //   )
-                                // }
                                 className="px-3 text-3xl rounded-md"
                               >
                                 -
@@ -148,11 +145,20 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                               <input
                                 type="number"
                                 value={citem.quantity}
-                                onChange={(e) =>
-                                  setPeopleCount(
-                                    Math.max(0, parseInt(e.target.value) || 0)
-                                  )
-                                }
+                                onChange={(e) => {
+                                  const newQuantity = parseInt(
+                                    e.target.value,
+                                    10
+                                  );
+                                  if (!isNaN(newQuantity) && newQuantity > 0) {
+                                    dispatch(
+                                      updateItemQtyCustom({
+                                        id: citem.id,
+                                        quantity: newQuantity,
+                                      })
+                                    );
+                                  }
+                                }}
                                 className="text-lg italic font-semibold w-16 bg-transparent text-center border-0 focus:outline-none"
                                 min="0"
                               />
@@ -183,6 +189,13 @@ const CustomSidebar = ({ isFactoryDirect }: any) => {
                     </div>
                     <div className="w-full md:w-auto  flex-1">
                       <textarea
+                        value={citem.specialInstruction || ""}
+                        onChange={(e) =>
+                          handleSpecialInstructionChange(
+                            citem.id,
+                            e.target.value
+                          )
+                        }
                         className=" border italic rounded-lg text-xs h-20 w-full p-2"
                         placeholder="SPECIAL INSTRUCTIONS"
                         name="special-instruction"

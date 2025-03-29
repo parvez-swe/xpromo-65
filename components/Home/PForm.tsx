@@ -21,7 +21,7 @@ const PForm = () => {
     setNoDeadline(false);
   };
   return (
-    <div>
+    <div className=" w-full">
       <div className=" w-full">
         <>
           <Accordion

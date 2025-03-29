@@ -7,7 +7,7 @@ interface CartItem {
   discountedPrice?: number;
   quantity: number;
   images: any;
-  specialInstruction?: string; // New field for custom text input
+  specialInstruction?: string;
 }
 
 interface CartState {
@@ -32,7 +32,7 @@ const cartSlice = createSlice({
       );
 
       if (existingItem) {
-        existingItem.quantity += action.payload.quantity;
+        existingItem.quantity += action.payload.quantity || 1;
       } else {
         state.cartItems.push({ ...action.payload });
       }
@@ -75,6 +75,19 @@ const cartSlice = createSlice({
       cartSlice.caseReducers.updateTotals(state);
     },
 
+    updateItemQtyCustom: (
+      state,
+      action: PayloadAction<{ id: string; quantity: number }>
+    ) => {
+      const item = state.cartItems.find(
+        (item) => item.id === action.payload.id
+      );
+      if (item) {
+        item.quantity = Math.max(1, action.payload.quantity); // Ensure quantity is at least 1
+      }
+      cartSlice.caseReducers.updateTotals(state);
+    },
+
     updateTotals: (state) => {
       state.totalQty = state.cartItems.reduce(
         (total, item) => total + item.quantity,
@@ -107,6 +120,7 @@ export const {
   clearCart,
   increaseQty,
   decreaseQty,
+  updateItemQtyCustom,
   updateSpecialInstruction,
 } = cartSlice.actions;
 

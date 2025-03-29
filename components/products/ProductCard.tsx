@@ -7,7 +7,7 @@ import { addToCart } from "@/redux/slices/cartSlice";
 
 export function ProductCard({ product }: any) {
   const dispatch = useDispatch();
-  console.log(product.images[0]);
+  // console.log(product.images[0]);
 
   return (
     <Card className="overflow-hidden border-newprimary text-newprimary">
@@ -32,7 +32,14 @@ export function ProductCard({ product }: any) {
           <button
             // variant="outline"
             className="] border-newprimary text-newprimary text-xs font-bold w-fit px-5 py-2 border-2 rounded-full hover:bg-gray-100"
-            onClick={() => dispatch(addToCart(product))}
+            onClick={() =>
+              dispatch(
+                addToCart({
+                  ...product,
+                  quantity: 1, // Ensure quantity is set
+                })
+              )
+            }
           >
             ADD TO QUOTE
           </button>

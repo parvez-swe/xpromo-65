@@ -15,25 +15,25 @@ const steps = [
     title: "Choose Your Product",
     description:
       "Browse through our wide range of products and pick the one that suits your needs.",
-    image: step1Animation, // Use the imported JSON
+    image: step3Animation, // Use the imported JSON
   },
   {
     title: "Let Us Help You With The Best Design",
     description:
       "Our team of experts will work with you to create the best possible design for your product.",
-    image: step2Animation, // Use the imported JSON
+    image: step4Animation, // Use the imported JSON
   },
   {
     title: "Confirm The Artwork",
     description:
       "Once the design is ready, you'll have the opportunity to review and confirm it before moving forward.",
-    image: step3Animation, // Use the imported JSON
+    image: step2Animation, // Use the imported JSON
   },
   {
     title: "Delivery",
     description:
       "After your approval, we'll get to work and deliver the final product right to your door.",
-    image: step4Animation, // Use the imported JSON
+    image: step1Animation, // Use the imported JSON
   },
 ];
 
